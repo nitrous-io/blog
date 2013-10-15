@@ -32,6 +32,6 @@ Using Nitrous I also took part in a company hackathon, and won 3rd place! My com
 
 I love that I can spin up a new box in seconds and start developing proof of concepts in minutes. 
 
-One of the other great features is that I love is that I can show off my the features currently in development by having him go to the preview link. 
+Another sweet feature that I've used a lot is the ability to provide a public preview link of my app. With this I can show off the features currently in development to my partner. Videos and screenshots are great, but if your team is distributed, having the ability to spitball and play with design in real time is absolutely necessary.
 
 I recommend using Nitrous to any new programmers, it removes all of the hiccups of installing the newest version of the programming language and framework, which can be tiresome depending on your OS, and the version of your OS. Nitrous gets all of that out of the way so you can just sit down and code.
