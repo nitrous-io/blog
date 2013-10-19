@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nitrous.IO Stories - Ryan Smith of Wilson & Smith
+title: Nitrous.IO Stories - Ryan Smith of Wilson &amp; Smith
 ---
 
 <img src="/images/ryansmith.jpg" alt="ryan smith" />
