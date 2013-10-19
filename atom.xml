@@ -8,7 +8,7 @@ layout: nil
   <link href="http://blog.nitrous.io/atom.xml" rel="self"/>
   <link href="http://blog.nitrous.io/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://blog.nitrous.io</id>
+  <id>http://blog.nitrous.io/</id>
   <author>
     <name>.Nitrous.IO</name>
     <email>hello@nitrous.io</email>

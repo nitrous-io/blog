@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nitrous.IO Stories - Miles Smith Develops for the Minecraft Community & the Gaming Industry
+title: Nitrous.IO Stories - Miles Smith Develops for the Minecraft Community and the Gaming Industry
 author: greg
 ---
 
