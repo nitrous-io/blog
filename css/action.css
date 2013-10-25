@@ -20,6 +20,9 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
+h4{
+  padding-top: 1.3rem;
+}
 p img {
   max-width: 100%;
   height: auto;
