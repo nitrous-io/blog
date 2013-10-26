@@ -148,4 +148,6 @@ Once the upload has finished you should see the message "Deployment Successful".
 
 You can view your Ghost site at `http://appname.azurewebsites.net`, and you can access your admin settings at `http://appname.azurewebsites.net/ghost/`.
 
+![Ghost Blog Page](/images/ghost-blog-page.png)
+
 That's it! How did it go for you? If you're having trouble, you can always get in touch with us by visiting our [chat room](https://www.nitrous.io/chat) or by [emailing us](mailto:support@nitrous.io).
