@@ -121,6 +121,9 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		<p>
 			<ul>
 				<li>
+			    <a href="http://learn-rails.com/learn-ruby-on-rails.html?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Learn Ruby on Rails</a>
+			  </li>
+				<li>
 			    <a href="http://amzn.to/HrF7cn" target="_blank">The Ruby Programming Language</a> <a href="http://amzn.to/1hssivU" target="_blank">(Kindle)</a>
 			  </li>
 			  <li>
