@@ -98,7 +98,7 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		    <a href="http://railscasts.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Railscasts</a> (Ruby/Rails related screencasts)
 		  </li>
 		  <li>
-		    <a href="https://peepcode.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Peep Code</a> (Ruby/Rails related screencasts)
+		    <a href="https://peepcode.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">PeepCode</a> (Ruby/Rails related screencasts)
 		  </li>
 		</ul>
 
