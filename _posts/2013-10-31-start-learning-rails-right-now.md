@@ -100,6 +100,9 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		  <li>
 		    <a href="https://peepcode.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">PeepCode</a> (Ruby/Rails related screencasts)
 		  </li>
+		  <li>
+		    <a href="http://ruby.railstutorial.org/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Ruby on Rails Tutorial</a> (Ruby/Rails screencasts and book)
+		  </li>
 		</ul>
 
 		<p>
@@ -122,6 +125,9 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 			<ul>
 				<li>
 			    <a href="http://learn-rails.com/learn-ruby-on-rails.html?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Learn Ruby on Rails</a>
+			  </li>
+			  <li>
+			    <a href="http://amzn.to/1iAMxoR" target="_blank">Ruby on Rails Tutorial</a> <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target"_blank">(HTML)</a>
 			  </li>
 				<li>
 			    <a href="http://amzn.to/HrF7cn" target="_blank">The Ruby Programming Language</a> <a href="http://amzn.to/1hssivU" target="_blank">(Kindle)</a>
