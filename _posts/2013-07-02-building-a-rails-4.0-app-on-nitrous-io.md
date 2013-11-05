@@ -10,7 +10,9 @@ Rails 4.0 incorporates many new features on top of an already very powerful fram
 
 * A [Nitrous.IO account](https://nitrous.io)
 * A [Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO. The Ruby box template will include ruby 2.0 and Rails 4.
-* A database.  All boxes ship with SQLite pre-installed, but you can use Postgres by following this [post about setting up Heroku Postgres](http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html#database) if you prefer.
+* <s>A database.  All boxes ship with SQLite pre-installed, but you can use Postgres by following this [post about setting up Heroku Postgres](http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html#database) if you prefer.</s>
+
+>Update: You can now install [PostgreSQL](http://help.nitrous.io/postgresql/) on your Nitrous box with the package manager, [Autoparts](http://help.nitrous.io/autoparts/). This will be covered in the next step.
 
 ### Creating an application on your Nitrous.IO box
 
@@ -27,9 +29,11 @@ Now, let's switch to the blog directory to continue working on the app:
 
 ### Create a Development Database
 
-We'll want to create a development database to use in our application.  If you'd like to use Heroku Postgres, you can follow [this guide](http://help.nitrous.io/postgres/).  Postgres is slightly more complicated to setup than SQLite, but has some more powerful features.
+<s>We'll want to create a development database to use in our application.  If you'd like to use Heroku Postgres, you can follow [this guide](http://help.nitrous.io/postgres/).  Postgres is slightly more complicated to setup than SQLite, but has some more powerful features.
 
-If you're following this [blog post](http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html#Create a Development Database on Heroku Postgres), you can stop after you have configured your database.yml file and come back to this guide.
+If you're following this [blog post](http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html#Create a Development Database on Heroku Postgres), you can stop after you have configured your database.yml file and come back to this guide.</s>
+
+>Update: You can now install [PostgreSQL](http://help.nitrous.io/postgresql/) directly on your Nitrous box by running `parts install postgresql`. Read the [support documentation](http://help.nitrous.io/postgresql/) for connecting via Rails.
 
 ### Create Controllers and Routes
 
