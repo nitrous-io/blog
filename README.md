@@ -1,4 +1,4 @@
-ActionBlog
+Nitrous.IO Blog
 =========
 
-Action.IO Blog
+Source for blog.nitrous.io
