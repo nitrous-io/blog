@@ -36,7 +36,7 @@ Eg: `parts install mongodb` to install mongo on your current box.
 
 Alternately if you use a cloud storage provider such as [MongoHQ](http://www.mongohq.com/{{page.utm}}) or [RedisCloud](http://redis-cloud.com/{{page.utm}}) you can always use that with Nitrous.IO.
 
-###2. Code in Scala || Haskell || Pascal || Lua || Rust || Java*
+###2. Code in Lua || Rust || Pascal || Java*
 While we don't have a custom environment for these languages, you can use the `autoparts` feature discussed above to install these languages for your box.
 Simply type `parts search <name>` for the language of your choice and install it with `parts install`
 
