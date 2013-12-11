@@ -133,6 +133,10 @@ footer div #feeds {
   bottom: 5px;
 }
 
+footer a.btn {
+  display: block;
+}
+
 h1.post-title {
   font-size: 32px;
 }
