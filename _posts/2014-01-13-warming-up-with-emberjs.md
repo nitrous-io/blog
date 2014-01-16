@@ -8,13 +8,13 @@ utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=warmingupwithemberjs
 *This is a guest post by [Adam Fortuna](http://adamfortuna.com) from [Code School](http://codeschool.com) about their new class "Warming up with Ember.js" along with some pointers on additional Ember.js resources.*
 
 ![Warming Up With Ember.js](/images/codeschool/warming-up-header.png)
-<!--break-->
 
 Recently, we've been working hard creating our latest course, [Warming Up With Ember.js](https://www.codeschool.com/courses/warming-up-with-emberjs) at Code School.
 
 ## Code School and Envy Labs
 
 One thing to know about Code School, is that it's an internal project created by [Envy Labs](http://envylabs.com), a web development shop in Orlando, FL. The Envy side handles consulting, while a dedicated team works exclusively on Code School. I'm on the Code School side myself, but the Envy side helps us keep our ear to the ground on what technologies clients are asking for. Ember.js was chosen for an education platform for Cisco worked on by the Envy Labs team, and I knew it was only a matter of time before we wrote a course on it.
+<!--break-->
 
 ## Choosing a Subject
 
