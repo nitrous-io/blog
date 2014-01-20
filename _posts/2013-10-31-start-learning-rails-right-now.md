@@ -74,7 +74,7 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 </ul>
 </p>
 <p>
-	For a directory of many more academies near you or online, give <a href="http://bootcamper.io/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">BootCamper</a> a visit. They do an amazing job at organizing all of the <a href="http://bootcamper.io/t/type/in-class">in class</a> and <a href="http://bootcamper.io/t/type/online?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article">online academies</a>, and it will take away the stress of finding which is right for you.
+	For a directory of many more academies near you or online, give <a href="http://bootcamper.io/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">BootCamper</a> and <a href="http://coursereport.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Course Report</a> a visit. Both sites do an amazing job at organizing all of the in class and online academies, and will take away the stress of finding which course is the right one for you.
 </p>
 
 ### Free (and Paid) Online Resources
