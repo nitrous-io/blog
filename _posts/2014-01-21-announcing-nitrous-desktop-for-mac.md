@@ -14,15 +14,9 @@ using the Mac platform.
 
 <!--break-->
 
-However, the app was not compatible with the latest Mac operating
-system, dubbed Mavericks. Unfortunately, due to the way the app was
-built, a quick update to support the new operating system was not
-feasible. Some of the required features of the OS were either deprecated
-or removed and a large portion of the app had to be rewritten.
-
-So we've completely re-architected the application from the ground up
-with a future-proof technology, and the new app, now called Nitrous
-Desktop, is available today!
+We've completely re-architected the application from the ground up
+with amazing new technology, and the new app, now called *Nitrous
+Desktop*, is available today!
 
 <a href="https://www.nitrous.io/mac" class="btn btn-success">Download Nitrous.IO for Mac</a>
 
@@ -30,9 +24,11 @@ What makes the new Mac app really interesting from a technical point of
 view is that the large portion of the app is built with the same
 technologies that power our web app such as
 [Ember.js](http://emberjs.com/) and [Node.js](http://nodejs.org/). This
-not only lets us to re-use code, but also makes it easier for us to port
-our application over to other platforms. We will write more about this
-in detail in future posts.
+not only lets us re-use code, but also makes it easier for us to port
+our application over to other platforms (wink wink Windows)
 
-Head over to the [Nitrous Desktop Help](http://help.nitrous.io/nitrous-desktop/)
+We will write more about this in detail in future posts.
+
+Head over to the [Nitrous Desktop Help Section](http://help.nitrous.io/nitrous-desktop/)
 to see how it works, and enjoy!
+
