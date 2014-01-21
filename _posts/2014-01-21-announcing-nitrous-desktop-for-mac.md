@@ -18,7 +18,7 @@ We've completely re-architected the application from the ground up
 with amazing new technology, and the new app, now called *Nitrous
 Desktop*, is available today!
 
-<a href="https://www.nitrous.io/mac" class="btn btn-success">Download Nitrous.IO for Mac</a>
+<a href="https://www.nitrous.io/mac?{{ page.utm }}" class="btn btn-success">Download Nitrous.IO for Mac</a>
 
 What makes the new Mac app really interesting from a technical point of
 view is that the large portion of the app is built with the same
@@ -29,6 +29,6 @@ our application over to other platforms (wink wink Windows)
 
 We will write more about this in detail in future posts.
 
-Head over to the [Nitrous Desktop Help Section](http://help.nitrous.io/nitrous-desktop/)
+Head over to the [Nitrous Desktop Help Section](http://help.nitrous.io/nitrous-desktop/?{{ page.utm }})
 to see how it works, and enjoy!
 
