@@ -5,7 +5,7 @@ author: arun
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=dietcoda
 ---
 
-We at Nitrous.IO love [Panic](http://panic.com/?{{page.utm}}) and the amazing products that they have
+We at [Nitrous.IO](https://www.nitrous.io/?{{page.utm}}) love [Panic](http://panic.com/?{{page.utm}}) and the amazing products that they have
 shipped over the years. One of the more interesting products they've
 launched most recently is [Diet
 Coda](http://www.panic.com/dietcoda/?{{page.utm}}) a
@@ -18,21 +18,23 @@ not just for quick fixes, but for full-blown development.
 
 ![Intro Diet Coda](/images/diet-coda/intro.png)
 
-## No Computer? No Problem
+## No Computer? No Problem 
 
 If you're travelling light and have only packed your iPad with you, or
 if you're at a conference and an urgent bug needs to be fixed, or even
 when you're relaxing on the couch watching MLB on your iPad late at night and remembered that one
 commit you forgot to make &ndash;
-you can do that now with Diet Coda and Nitrous.IO.
+you can do that now with Diet Coda and [Nitrous.IO](https://www.nitrous.io/?{{page.utm}}).
 
 Let me show you how.
 
 <!--break-->
-## Setting up SSH Keys
 
-The first step that needs to be done before you can get cracking is to
-set up your SSH keys.
+## Setup SSH Keys on Diet Coda
+
+If you don't already have a [Nitrous.IO account sign up here for free.](https://www.nitrous.io/?{{page.utm}}&utm_keyword=top)
+
+Then the first step is to set up your SSH keys on Diet Coda.
 
 This assumes that you have SSH keys already generated on your
 Mac/Windows machine and you have [uploaded them to
@@ -72,7 +74,7 @@ synced to Diet Coda.
 Great! Your private key is now on your iPad and you're ready to connect
 to your Nitrous.IO box using Diet Coda.
 
-## Setting up Login Credentials
+## Setup Login Credentials on Diet Coda
 
 Look up the SSH Host and Port and username for your box and keep it handy. You can
 look it up from your [boxes dashboard on
@@ -138,7 +140,7 @@ There you have it folks - this is just a glance at what the future holds
 for us - dev environments in the cloud that are spun up within seconds,
 and accessible from any device of any form-factor.
 
-We have more great stuff planend this year, so stay tuned!
+Get your [Nitrous.IO Account here](https://www.nitrous.io/?{{page.utm}}&utm_keyword=bottom)
+and get Diet Coda from the [App Store](https://itunes.apple.com/us/app/diet-coda/id500906297?mt=8).
 
-Diet Coda is available on the [App Store for
-$19.99](https://itunes.apple.com/us/app/diet-coda/id500906297?mt=8).
+We have more great stuff planend this year, so [follow us on twitter](http://twitter.com/nitrousio) and stay tuned!
