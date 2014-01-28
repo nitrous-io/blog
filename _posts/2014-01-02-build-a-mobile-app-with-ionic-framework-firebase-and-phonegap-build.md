@@ -2,27 +2,27 @@
 layout: post
 title: Build a Mobile App on Nitrous.IO with Ionic Framework, Firebase, and PhoneGap
 author: greg
-utm: ?utm_source=ionicframework.com&utm_medium=blog&utm_content=ionic_firebase_mobile_app
+utm: utm_source=ionicframework.com&utm_medium=blog&utm_content=ionic_firebase_mobile_app
 ---
 
 ![Mobile App using Ionic, Firebase, and PhoneGap Build](/images/todo-app-main.jpg)
 
 <p class="text-muted">Origionally a guest post on the Ionic Framework <a href="http://ionicframework.com/blog/ionic-and-nitrousio/" target="_blank">blog</a>.</p>
 
-Looking to build a mobile app with the Ionic Framework? This guide quickly covers how to build a native Android app on [Nitrous.IO](http://www.nitrous.io) with [PhoneGap Build](http://build.phonegap.com/). You will also learn how to use [AngularFire](http://angularfire.com/) to connect your app to [Firebase](https://www.firebase.com/index.html) for a backend service. All of these services provide a free tier, so you can try this out without dropping a dime.
+Looking to build a mobile app with the Ionic Framework? This guide quickly covers how to build a native Android app on [Nitrous.IO](http://www.nitrous.io/?{{page.utm}}) with [PhoneGap Build](http://build.phonegap.com/). You will also learn how to use [AngularFire](http://angularfire.com/) to connect your app to [Firebase](https://www.firebase.com/index.html) for a backend service. All of these services provide a free tier, so you can try this out without dropping a dime.
 
 <!--break-->
 ### Prerequisites
 
 Before we get started, make sure you have the following:
 
-* A Node.JS box on [Nitrous.IO](http://www.nitrous.io)
+* A Node.JS box on [Nitrous.IO](http://www.nitrous.io/?{{page.utm}})
 * A [Github account](http://www.github.com) which is [connected](http://help.nitrous.io/github-add-key/) to your Node.JS box
 * A [PhoneGap Account](https://build.phonegap.com/plans)
 
 ### Create a Node.JS box on Nitrous.IO
 
-If you haven't already, sign up at [Nitrous.IO](http://www.nitrous.io) and create a Node.JS box.
+If you haven't already, sign up at [Nitrous.IO](http://www.nitrous.io/?{{page.utm}}) and create a Node.JS box.
 
 ![Nitrous.IO creating Node.JS box](/images/nitrous-create-node-box.png)
 
@@ -69,13 +69,13 @@ Now, let's setup PhoneGap Build. First you will need to sign up at [https://buil
 
 ![Signup with PhoneGap](/images/phonegap-signup.png)
 
-You can login with your existing Github account to make connecting to your repo easier, but if you login with your Adobe ID then then you will have to manually paste in your Github project repo URI. 
+You can login with your existing Github account to make connecting to your repo easier, but if you login with your Adobe ID then then you will have to manually paste in your Github project repo URI.
 
 Once logged in, create a new app and select the Github repo we just created. Once this has been added, select **Build App** as seen below:
 
 ![Signup with PhoneGap](/images/phonegap-build-app.png)
 
-This should only take a minute to build. Once ready you will have instant access to download the app for Android, Windows Mobile, WebOS, or Symbian. 
+This should only take a minute to build. Once ready you will have instant access to download the app for Android, Windows Mobile, WebOS, or Symbian.
 
 >If you are working with iOS in developer mode, you must provide a signing key before downloading the app.
 
