@@ -18,11 +18,17 @@ body, body p {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.4em;
 }
 
 h4{
   padding-top: 1.3rem;
 }
+
+h3 {
+  margin: 32px 0 12px;
+}
+
 p img {
   max-width: 100%;
   height: auto;
