@@ -200,6 +200,11 @@ blockquote{
   background-color: #fcf8e3;
 }
 
+p.caption {
+  margin-left: 7px;
+  color: #888;
+}
+
 .gist .gist-file .gist-data{
   max-height: 300px;
 }
