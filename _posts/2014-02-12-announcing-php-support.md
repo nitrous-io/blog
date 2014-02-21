@@ -5,9 +5,11 @@ author: greg
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=php_announcement
 ---
 
-There are millions of PHP developers on this planet, and most of them emailed us, tweeted, and sent us letters begging for PHP support on Nitrous.IO.  
+There are millions of PHP developers on this planet, and most of them emailed us, tweeted, and sent us letters begging for PHP support on Nitrous.IO.
 
 Today, we are excited to announce that your PHPrayers have been answered.
+
+<!--break-->
 
 To get started, head over to your [list of boxes](https://www.nitrous.io/app#/boxes?{{ page.utm }}) and create a new box using the PHP template.
 
@@ -16,7 +18,7 @@ To get started, head over to your [list of boxes](https://www.nitrous.io/app#/bo
 
 ### PHP + MySQL + Memcache + Etc...
 
-Of course, like Batman & Robin, PHP is nothing without its sidekick [MySQL](http://help.nitrous.io/mysql/?{{ page.utm }}).  For all your database needs [Autoparts](http://help.nitrous.io/autoparts?{{ page.utm }}) has you covered. You can use the [Autoparts](http://help.nitrous.io/autoparts?{{ page.utm }}) package manager to quickly install PHP5, Apache2, Composer, and other tools and databases like MySQL in just seconds. 
+Of course, like Batman & Robin, PHP is nothing without its sidekick [MySQL](http://help.nitrous.io/mysql/?{{ page.utm }}).  For all your database needs [Autoparts](http://help.nitrous.io/autoparts?{{ page.utm }}) has you covered. You can use the [Autoparts](http://help.nitrous.io/autoparts?{{ page.utm }}) package manager to quickly install PHP5, Apache2, Composer, and other tools and databases like MySQL in just seconds.
 
 You can also [read our PHP guide](http://help.nitrous.io/php?{{ page.utm }}) to help you get started with your PHP project.
 
