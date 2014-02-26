@@ -17,7 +17,7 @@ Google App Engine (GAE) is the Platform-as-a-Service portion of Google Cloud Pla
 
 Start at [the new boxes page](https://www.nitrous.io/app#/boxes/new?{{page.utm}}) on Nitrous.IO and select a new PHP Box.
 
-![PHP on Nitrous.IO](/images/php-template.png)
+![PHP on Nitrous.IO](/images/google/newbox.png)
 
 That's it. **Your PHP environment is now ready to go.**
 
@@ -34,23 +34,26 @@ Click the **Create a new Application** Button and register an application ID.
 
 ### Add the GAE SDK to your Nitrous.IO environment.
 
-In your `~/workspace` directory run the following commands to install the SDK:
+We'll install the Google App Enigne SDK from Nitrous.IO's package manager *[autoparts.](http://help.nitrous.io/autoparts/?{{page.utm}})*
 
-    wget http://googleappengine.googlecode.com/files/google_appengine_1.8.9.zip
-    unzip google_appengine_1.8.9.zip
+In the terminal type:
 
-This sets up the Google App Engine SDK in the  `google-app-engine` directory.
+         parts install googleappengine
+
+You can also install it from the UI by selecting AutoParts >> Manage Packages.
 
 ### Build and Test on Nitrous.IO
 
-Let's start by cloning the _HelloWorld_ PHP example  
+Let's start by cloning the _HelloWorld_ PHP example
 
     cd ~/workspace/www
     git clone https://github.com/GoogleCloudPlatform/appengine-helloworld-php
 
 
 
-We can now edit and test this code. Nitrous.IO web IDE's [live preview feature](http://help.nitrous.io/preview/) let's you view your code before pushing to production. Check it out by clicking *Preview>> Port 3000* from the IDE menu.
+We can now make any changes we want to this code with the WebIDE or locally in your favorite text editor if you use the [Nitrous Desktop Apps.](http://nitrous.io/desktop/?{{page.utm}}) 
+
+Nitrous.IO web IDE's [live preview feature](http://help.nitrous.io/preview/) let's you view your code before pushing to production. Check it out by clicking *Preview>> Port 3000* from the IDE menu.
 
 ![Editing PHP on Nitrous.IO](/images/google/preview.png)
 
@@ -62,7 +65,7 @@ Edit the [app.yaml settings file](https://developers.google.com/appengine/docs/p
 
 Now to deploy simply run the command below from within the `www` directory
 
-    ~/workspace/appappcfg.py update appengine-helloworld-php
+    appappcfg.py update appengine-helloworld-php
 
 
 ![Deploying to GAE](/images/google/deploy.png)
