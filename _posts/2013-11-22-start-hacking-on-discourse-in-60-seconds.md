@@ -2,6 +2,7 @@
 layout: post
 title: Start Hacking on Discourse in 60 Seconds
 author: aj
+category: tutorials
 ---
 
 ![Discourse](/images/discourse/discourse.png)

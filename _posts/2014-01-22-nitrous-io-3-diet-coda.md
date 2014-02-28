@@ -3,6 +3,7 @@ layout: post
 title: Code on your iPad using Nitrous.IO and Panic's Diet Coda
 author: arun
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=dietcoda
+category: tutorials
 ---
 
 At [Nitrous.IO](https://www.nitrous.io/?{{page.utm}}), we love [Panic](http://panic.com/?{{page.utm}}) and the amazing products that they have shipped over the years. One of the more interesting products they've launched recently is [Diet

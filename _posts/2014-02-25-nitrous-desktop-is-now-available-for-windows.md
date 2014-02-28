@@ -3,6 +3,7 @@ layout: post
 title: Nitrous Desktop Is Now Available For Windows
 author: pete
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=nitrousdesktopforwindows
+category: announcements
 ---
 
 ![Nitrous Desktop For

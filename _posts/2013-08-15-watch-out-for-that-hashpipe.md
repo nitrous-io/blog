@@ -2,6 +2,7 @@
 layout: post
 title: "Watch out for that Hashpipe"
 author: greg
+category: interviews
 ---
 
 ![Hashpipe IDE](/images/hashpipe-ide.png)

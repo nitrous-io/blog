@@ -2,6 +2,7 @@
 layout: post
 title: Get Productive - Start Learning Rails Right Now
 author: greg
+category: tutorials
 ---
 
 ![Learning Rails with Macbook](/images/macbook-on-desk.jpg)

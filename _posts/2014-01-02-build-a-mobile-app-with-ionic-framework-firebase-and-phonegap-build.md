@@ -3,6 +3,7 @@ layout: post
 title: Build a Mobile App on Nitrous.IO with Ionic Framework, Firebase, and PhoneGap
 author: greg
 utm: utm_source=ionicframework.com&utm_medium=blog&utm_content=ionic_firebase_mobile_app
+category: tutorials
 ---
 
 ![Mobile App using Ionic, Firebase, and PhoneGap Build](/images/todo-app-main.jpg)

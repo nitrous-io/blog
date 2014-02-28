@@ -2,6 +2,7 @@
 layout: post
 title: Build Parse Web Apps in the Browser with Nitrous.IO and the Express Framework
 author: pete
+category: tutorials
 ---
 
 Today, [Parse](https://parse.com/) announced support for the [Express framework](http://expressjs.com/)

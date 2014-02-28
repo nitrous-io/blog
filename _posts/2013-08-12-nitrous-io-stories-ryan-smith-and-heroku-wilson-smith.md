@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Nitrous.IO Stories - Ryan Smith of Wilson &amp; Smith
+category: interviews
 ---
 
 <img src="/images/ryansmith.jpg" alt="ryan smith" />

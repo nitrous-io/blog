@@ -3,6 +3,7 @@ layout: post
 title: PHP Power!
 author: greg
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=php_announcement
+category: announcements
 ---
 
 There are millions of PHP developers on this planet, and most of them emailed us, tweeted, and sent us letters begging for PHP support on Nitrous.IO.

@@ -3,6 +3,7 @@ layout: post
 title: Announcing Nitrous Desktop for Mac
 author: pete
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=nitrousdesktopformac
+category: announcements
 ---
 
 ![Nitrous Desktop](/images/nitrous-desktop-mac.png)

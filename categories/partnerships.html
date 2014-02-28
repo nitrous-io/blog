@@ -1,0 +1,56 @@
+---
+layout: default
+title: Nitrous.IO Blog
+---
+
+{% for post in site.categories.partnerships %}
+  {% if post.draft %}
+  {% else %}
+  {% assign author = site.authors[post.author] %}
+    <div class="post">
+      <h1 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p class="small text-muted">
+        <time pubdate datetime="{{ post.date | date: "%d %B %Y" }}">{{ post.date | date: "%d %B %Y" }}
+          {% if author.display_name %}
+            by <a href="https://www.twitter.com/{{author.twitter}}">{{ author.display_name }}</a>
+          {% endif %}
+          {% if post.category %}
+            in <a href="{{ post.category | append:'.html' | prepend:'/categories/'}}">{{ post.category | capitalize }}</a>
+          {% endif %}
+        </time>
+      </p>
+      {{ post.content | split:'<!--break-->' | first }}
+      {% if post.content contains '<!--break-->' %}
+        <a href="{{ post.url }}" class="btn btn-default read-more clearfix">Read More...</a>
+      {% endif %}
+
+      <div class="share-buttons clearfix">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://blog.nitrous.io{{ post.url }}" data-via="nitrousio" data-related="nitrousio" data-lang="en">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </div>
+    <hr />
+  {% endif %}
+{% endfor %}
+<div id="pagination">
+  <section id="older">
+    {% if paginator.next_page %}
+    <div class="pnav older pull-left">
+      <a href="/page{{ paginator.next_page }}"><i class="icon-angle-left"></i> Older Posts</a>
+    </div>
+    {% endif %}
+  </section>
+  <section id="newer">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <div class="pnav newer pull-right">
+        <a href="/">Newer Posts <i class="icon-angle-right"></i></a>
+      </div>
+      {% else %}
+      <div class="pnav newer pull-right">
+        <a href="/page{{ paginator.previous_page }}">Newer Posts <i class="icon-angle-right"></i></a>
+      </div>
+      {% endif %}
+    {% endif %}
+  </section>
+</div>

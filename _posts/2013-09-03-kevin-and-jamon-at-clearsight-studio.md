@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO Stories - ClearSight Studio
 author: greg
+category: interviews
 ---
 
 <img src="/images/jamon-and-clearsight.jpg" alt="Jamon Holmgren with the ClearSight team" />

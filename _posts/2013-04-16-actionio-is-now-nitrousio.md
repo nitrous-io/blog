@@ -2,6 +2,7 @@
 layout: post
 title: Action.IO is now Nitrous.IO
 author: aj
+category: announcements
 ---
 
 It's been awhile since we've last written. If you missed us, we apologize. You're dying to know what we've been up to, we know.

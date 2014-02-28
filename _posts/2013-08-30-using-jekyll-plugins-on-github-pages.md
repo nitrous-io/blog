@@ -2,6 +2,7 @@
 layout: post
 title: Using Jekyll Plugins on Github Pages
 author: greg
+category: tutorials
 ---
 
 At Nitrous.IO we love [Jekyll](http://jekyllrb.com/). We use it for our blog, our [updates](http://updates.nitrous.io), and even for our [help site](http://help.nitrous.io). The best part about Jekyll is the ability to host it on [Github Pages](http://pages.github.com/).

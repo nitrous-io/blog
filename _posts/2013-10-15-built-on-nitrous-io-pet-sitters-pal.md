@@ -2,6 +2,7 @@
 layout: post
 title: Built on Nitrous.IO - Pet Sitter's Pal
 author: greg
+category: interviews
 ---
 ![Pet Sitter's Pal](/images/pet_sitters_pal.png)
 ##### We interviewed Shaun McAvinney. He spent 1 year learning Ruby on Rails and developed [Pet Sitter's Pal](http://www.petsitterspal.com/) solely on Nitrous.IO.

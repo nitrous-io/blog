@@ -2,6 +2,7 @@
 layout: post
 title: "Edit Code on your Mac, Run it in the Cloud"
 author: aj
+category: announcements
 ---
 
 ![Mac dropdown](/images/mac-tour-menu@2x.png)

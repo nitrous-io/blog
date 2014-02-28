@@ -3,6 +3,7 @@ layout: post
 title: Introducing SSL Previews & Autoparts in the UI
 author: sandeep
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=introautopartspreviewssl
+category: announcements
 ---
 It's been a busy post holiday season for the Nitrous.IO team. We are excited to introduce two features that our customers have been requesting - **SSL Support for Live Preview** and **One Click Autoparts installation**.
 

@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO is now in public beta!
 author: aj
+category: announcements
 ---
 
 ### Start your engines

@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO Stories - The Team at Claimable
 author: greg
+category: interviews
 ---
 
 ![The Team at Claimable](/images/team-claimable.jpg)

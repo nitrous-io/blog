@@ -2,6 +2,7 @@
 layout: post
 title: "Coding on an iPad: iFad?"
 author: aj
+category: announcements
 ---
 
 ![coding on an iphone](/images/iphone-coding.jpg) 

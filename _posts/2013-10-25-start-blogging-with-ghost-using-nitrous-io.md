@@ -2,6 +2,7 @@
 layout: post
 title: Start Blogging with Ghost Using Nitrous.IO
 author: greg
+category: tutorials
 ---
 
 ![Ghost Blog](/images/ghost-blog.jpg)

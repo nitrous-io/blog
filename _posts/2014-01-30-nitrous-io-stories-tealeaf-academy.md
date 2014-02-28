@@ -3,6 +3,7 @@ layout: post
 title: Nitrous.IO Stories - Tealeaf Academy
 author: greg
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=tealeaf
+category: interviews
 ---
 
 *We recently interviewed [Chris Lee](https://twitter.com/cglee). Chris is the co-founder of [Tealeaf Academy](http://www.gotealeaf.com/), an online professional grade ruby on rails bootcamp. He tells us about Tealeaf Academy and How Nitrous.IO saves educators time by simplifying the setup process for new students.*

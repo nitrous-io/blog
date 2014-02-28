@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO Stories - Rails Girls
 author: greg
+category: interviews
 ---
 
 ![Rails Girls Meetup](/images/rails-girls.jpg)

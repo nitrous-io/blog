@@ -3,6 +3,7 @@ layout: post
 title:  Warming Up with EmberJS
 author: Adam Fortuna @ Codeschool
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=warmingupwithemberjs
+category: tutorials
 ---
 
 *This is a guest post by [Adam Fortuna](http://adamfortuna.com) from [Code School](http://codeschool.com) about their new class "Warming up with Ember.js" along with some pointers on additional Ember.js resources.*

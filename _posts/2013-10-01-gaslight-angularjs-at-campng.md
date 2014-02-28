@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Using Nitrous.IO at Gaslight's CampNG
-author: chris_gaslight	
+author: chris_gaslight
+category: interviews
 ---
 
 ![Chris Nelson with Gaslight](/images/chris_nelson.jpg)

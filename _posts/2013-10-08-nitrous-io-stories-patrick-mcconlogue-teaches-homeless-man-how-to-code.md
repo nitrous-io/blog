@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO Stories - Patrick McConlogue, the Programmer who is Teaching a Homeless Man How to Code
 author: greg
+category: interviews
 ---
 
 ![Leo and his Chromebook](/images/leo_chromebook.jpg)

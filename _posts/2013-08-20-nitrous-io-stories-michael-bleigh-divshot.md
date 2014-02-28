@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous.IO Stories - Michael Bleigh and Divshot
 author: greg
+category: interviews
 ---
 
 <img src="/images/michael-bleigh.jpg" alt="Michael Bleigh" />

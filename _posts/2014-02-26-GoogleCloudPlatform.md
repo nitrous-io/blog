@@ -3,6 +3,7 @@ layout: post
 title: Nitrous.IO joins Google Cloud Platform Partner Program
 author: Sandeep
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=gcp
+category: announcements
 ---
 Nitrous.IO allows developers a choice in web application languages, frameworks and production environments. We are joining the Google Cloud Platform Partner Program as a Technology Partner so that our customers have an easy path to deploy and scale their applications on Google's Infrastructure.
 

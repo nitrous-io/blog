@@ -2,6 +2,7 @@
 layout: post
 title:  Google Cloud Platform Starter Pack Offer 
 author: sandeep
+category: partnerships
 ---
 
 ![Google Cloud Platform Starter Pack](/images/gcpstarterpack.png)

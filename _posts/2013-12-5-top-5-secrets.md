@@ -3,6 +3,7 @@ layout: post
 title: 5 Things You Can Do On Nitrous.IO That You Might Not Know
 author: sandeep
 utm: ?utm_source=nitrous.io&utm_medium=blog&utm_content=top5tips
+category: tutorials
 ---
 Sometimes here at Nitrous.IO, we get so heads down on building new features and functionality for developers that we forget to let people know that we've built them.
 Here are five things you can do on Nitrous.IO today that you probably think you can't.

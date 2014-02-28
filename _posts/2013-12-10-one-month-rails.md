@@ -3,6 +3,7 @@ layout: post
 title: Top 5 Mistakes Everyone Makes Installing Rails
 author: Chris Castiglione of One Month Rails
 utm: ?utm_source=nitrous.io&utm_medium=blog&utm_content=onemnthfivemistakes
+category: tutorials
 ---
 [Chris Castiglione](https://twitter.com/castig/{{page.utm}}) is a co-founder of One Month Rails. One Month Rails is focused on helping everyone
 learn to code through step-by-step videos and detailed tutorials. He offers a perspective on the common mistakes
