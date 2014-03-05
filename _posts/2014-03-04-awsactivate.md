@@ -14,6 +14,6 @@ Nitrous.IO's solutions help developers create Ruby, Python, Go, and NodeJS envir
 <!--break-->
 "As a startup, collaboration and rapid iteration is critical," said Miles Tinsley, Founder and CEO of Claimable. "Nitrous.IO lets our contractors and new employees start working in minutes on our development environment rather than spending the first few days setting up the environment. We can take advantage of the collaborative hosted solution that Nitrous.IO provides to work seamlessly while allowing each developer to use the OS and Hardware of their choice."
 
-If you're already an activate member you can find the details of the current offer under the [Benefits / Special Offers Section](http://aws.amazon.com/activate/benefits/special-offers/) of the AWS website. Simply sign up for Nitrous.IO and email us at [awsactivate@nitrous.io](mailto:awsactivate@nitrous.io). Your plan will be upgraded once we have confirmation of you membership in activate. 
+If you're already an AWS Activate member you can find the details of the current offer under the [Benefits / Special Offers Section](http://aws.amazon.com/activate/benefits/special-offers/) of the AWS website. Simply sign up for Nitrous.IO and email us at [awsactivate@nitrous.io](mailto:awsactivate@nitrous.io). Your plan will be upgraded once we have confirmation of your AWS Activate membership.
 
 
