@@ -22,7 +22,7 @@ String.class_eval do
 end
 
 namespace :actionblog do
-  desc "New Blog Post, Usage: rake actionblog:new blog_title=\"Test\""
+  desc 'New Blog Post, Usage: rake actionblog:new blog_title="Test"'
   task :new do
     blog_title, now = ENV['blog_title'], Time.now
     todays_date = now.strftime("%Y-%m-%d")
