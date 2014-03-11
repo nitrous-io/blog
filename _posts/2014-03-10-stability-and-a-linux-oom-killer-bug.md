@@ -21,7 +21,7 @@ TL;DR: there's a pretty serious race-related bug in the Linux OOM killer that's 
 
 Our first record of a server outage was sometime in October 2013 &mdash; our host servers in the Southeast Asia region went down inexplicably. Our metrics and AWS CloudWatch indicated that CPU utilization spiked to 100%. Naïve as we were then, we chalked it down to an overloaded server.
 
-Soon, these outages began to happen more regularly but also very *randomly*. The symptoms were quite similar in the outages:
+Last month, these outages began to happen more regularly but also very *randomly*. The symptoms were quite similar in the outages:
 
 * CPU spikes to 100% utilization.
 * Disk I/O spikes.
