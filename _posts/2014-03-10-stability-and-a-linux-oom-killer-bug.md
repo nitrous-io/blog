@@ -11,7 +11,7 @@ We sincerely apologize to those of you who were inconvenienced by the recent out
 
 INSERT PICTURE OF SORRY CAT
 
-The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel.
+The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel.  As with many adventures, we inadvertently completed a number of side quests along the way.  While these may not have solved our immediate problem, they did help us level up and improve our systems, and we're happy to share those too.
 
 TL;DR: there's a pretty serious race-related bug in the Linux OOM killer that's been fixed on the Linux mainline and 3.14 branch. If you're experiencing lockups where the OOM killer appears in your `kern.log`/`syslog` shortly before the lockup, you should patch your kernel.
 
@@ -41,13 +41,13 @@ Everyone on the engineering team had their pet theories and proposed solutions, 
 
 #### Theory #1: Xen hypervisor bug
 
-We didn't find many clues on the Internet (as everybody knows, anything on the Internet has to be true) and had no real control over this one, so we didn't really give this theory much weight. Although, when we were throwing up our hands in the air, we might have declared it as "it's an effing Xen bug" a couple of times.
+"It's an effing Xen bug" was often our conclusion of choice when throwing our hands in the air in frustration.  But bugtrackers showed that no one else had reported anything similar, so we decided we weren't unique snowflakes with oh-so-special use cases and moved on.
 
 #### Theory #2: User processes overloading the host
 
-The most obvious course was to de-prioritize user processes that were running into CPU contention issues.
+The most obvious course was to de-prioritize user processes that ran into CPU contention issues.
 
-We introduced a process watcher called Bulldog that reaps abusive or malicious processes that were sucking up precious CPU time &mdash; Bitcoin miners (e.g. `minerd`), password miners and scrapers were not uncommon. This is a simplified animation of how Bulldog works:
+We introduced a process watcher called Bulldog that reaps abusive or malicious processes that were sucking up precious CPU time &mdash; Bitcoin miners (e.g. `minerd`), password miners, and scrapers were not uncommon. This is a simplified animation of how Bulldog works:
 
 ![Bulldog in action](/images/oom-killer/bulldog-balls.gif)
 
@@ -79,6 +79,8 @@ For a week or so, we had no outages, and we thought we'd nailed it. And then a s
 
 #### OMG it's a kernel bug
 
+Xen.  Miners.  CPU sharing.  Swap.  Our theories were exhausted, and we were about to resort to [word association](http://en.wikipedia.org/wiki/Word_Association) for more ideas.
+
 At this point, one of our engineers, Daniel, was pretty sure it's a Linux kernel bug, and went digging through the commit history of [the OOM killer](https://github.com/torvalds/linux/blob/master/mm/oom_kill.c) and noticed [these commits](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?id=4d4048be8a93769350efa31d2482a038b7de73d0&qt=range&q=9853a407b97d8d066b5a865173a4859a3e69fd8a...4d4048be8a93769350efa31d2482a038b7de73d0).
 
 The commit messages were pretty damning:
@@ -96,10 +98,10 @@ The new kernel was deployed last week and things have been stable since then.
 
 #### Relief and what's next?
 
-Having lived through weeks of random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
+Having gone through weeks of random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
 
 I'm also very happy that the engineering team can get back to focusing on features and customer requests, instead of being distracted by fire-fighting and baby-sitting scheduled maintenance periods.
 
-Want to get on Nitrous.IO service status and scheduled maintenance? Follow [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io)
+Want to get on Nitrous.IO service status and scheduled maintenance? Follow [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) .  Now with less updates than before, thanks to our new "less downtime" feature!
 
 
