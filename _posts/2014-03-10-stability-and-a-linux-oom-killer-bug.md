@@ -5,9 +5,9 @@ author: chuyeow
 category: engineering
 ---
 
-About a week ago, we deployed a patch to our servers that resolved a long-standing stability issue. The Nitrous.IO team is truly ecstatic to have solved this issue which has been troubling us for the past few months. The randomly-timed service outages were a huge pain for our customers who are relying on Nitrous.IO for their "always on" development box in the cloud.
+We recently deployed a kernel patch to our servers that resolved a recurring stability issue. Our team is truly ecstatic to have solved this issue which has been troubling us for the past few months. Our customers rely on Nitrous.IO for their "always on" development box in the cloud, and these randomly-timed service outages have been a huge pain.
 
-We sincerely apologize to those of you who were inconvenienced by the outages over the past few months. You deserve better and we'll do better. At this moment, we're just extremely happy to have stable servers once again.
+We sincerely apologize to those of you who were inconvenienced by the recent outages. You deserve better and we'll do better. At this moment, we're just extremely happy to have stable servers once again.
 
 INSERT PICTURE OF SORRY CAT
 
@@ -19,19 +19,19 @@ TL;DR: there's a pretty serious race-related bug in the Linux OOM killer that's 
 
 ### Early Signs
 
-Our first record of a server outage was sometime in October 2013 &mdash; our host servers in the Southeast Asia region went down inexplicably. Our metrics and AWS CloudWatch indicated that CPU utilization spiked to 100%. Naïve as we were then, we chalked it down to an overloaded server.
+Our first record of a server outage was sometime in October 2013 &mdash; our host servers in the Southeast Asia region went down inexplicably. Our metrics and AWS CloudWatch indicated that CPU utilization spiked to 100%. We chalked it down to an overloaded server, which we now know was naïve.
 
-Last month, these outages began to happen more regularly but also very *randomly*. The symptoms were quite similar in the outages:
+Last month, these outages began to happen more regularly but also very *randomly*. The symptoms were quite similar:
 
-* CPU spikes to 100% utilization.
-* Disk I/O spikes.
-* Server becomes completely inaccessible via SSH, etc.
+* CPU spiked to 100% utilization.
+* Disk I/O spiked.
+* Server became completely inaccessible via SSH, etc.
 * Logs show the Linux Out Of Memory (OOM) killer killing user processes that have hit their [cgroup](https://www.kernel.org/doc/Documentation/cgroups/cgroups.txt)'s memory limit shortly before the server froze.
 * Host memory was *not* under pressure - it was close to fully utilized (which is normal) but there was a lot of unused swap.
 
 ### Theories and Failed Solutions
 
-Almost everybody on the engineering team had their pet theories and proposed solutions, some of the notable ones being:
+Everyone on the engineering team had their pet theories and proposed solutions, some of the notable ones being:
 
 1. A Xen hypervisor bug on the Amazon EC2 host.
 * User processes were overloading the host.
@@ -51,7 +51,7 @@ We introduced a process watcher called Bulldog that reaps abusive or malicious p
 
 ![Bulldog in action](/images/oom-killer/bulldog-balls.gif)
 
-Bulldog worked fine but we realized that we were allowing user processes to consume too much CPU time &mdash; they were basically allowed to use all CPU cores if there was no competition (we were using the [`cpu.shares` cgroup parameter](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/sec-cpu.html) to allocate relative CPU shares).
+Bulldog worked fine and also showed us that we were allowing user processes to consume too much CPU time &mdash; they were basically allowed to use all CPU cores if there was no competition (we were using the [`cpu.shares` cgroup parameter](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/sec-cpu.html) to allocate relative CPU shares).
 
 We ended up using quotas so that the [Completely Fair Scheduler](http://en.wikipedia.org/wiki/Completely_Fair_Scheduler) (CFS) will cap CPU usage of user processes. The [`cpu.cfs_quota_us` and `cpu.cfs_period_us` parameters](https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) are well-documented and easy enough to use.
 
@@ -75,7 +75,7 @@ We set `vm.swappiness` back to the default of 60 to encourage the kernel to use 
 
 We also set `vm.min_free_kbytes` to ~5% of memory to reduce the possibility of the host going OOM before using swap.
 
-For a week or so, we had no outages, and we thought we'd nailed it. And then a spate of random outages hit us again and we realized that our victory was premature.
+For a week or so, we had no outages, and we thought we'd nailed it. And then a spate of random outages hit us again and we realized we had declared victory prematurely.
 
 #### OMG it's a kernel bug
 
@@ -88,15 +88,15 @@ The commit messages were pretty damning:
 2014-01-22  introduce for_each_thread() to replace the buggy while_each_thread()
 ````
 
-**Jackpot!** There was a possible race condition in the OOM killer where it tries to kill a process that was already killed (probably by its parent process), and `while_each_thread()` goes into an **infinite loop**. There is [greater detail in this commit message](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=0c740d0afc3bff0a097ad03a1c8df92757516f5c).
+**Jackpot!** There was a possible race condition in the OOM killer where it tries to kill a process that was already killed (probably by its parent process), and `while_each_thread()` goes into an **infinite loop**. [This commit message](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=0c740d0afc3bff0a097ad03a1c8df92757516f5c) goes into greater detail.
 
-We [patched](https://github.com/nitrous-io/linux/tree/stable-trusty) the Ubuntu Trusty tree of the kernel (which based off of 3.13-mainline) and compiled a custom kernel with [Packer](http://www.packer.io/). As good scientists, we successfully reproduced the OOM killer bug on our current 3.8 kernel but not on the new kernel.
+We [patched](https://github.com/nitrous-io/linux/tree/stable-trusty) the Ubuntu Trusty tree of the kernel (which based off of 3.13-mainline) and compiled a custom kernel with [Packer](http://www.packer.io/). As good scientists, we made sure we could reproduce the OOM killer bug on our current 3.8 kernel but not on the new kernel.
 
 The new kernel was deployed last week and things have been stable since then.
 
 #### Relief and what's next?
 
-Having lived through weeks of random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected by random outages and possible loss of work or connectivity to their boxes &mdash; it was unacceptable.
+Having lived through weeks of random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
 
 I'm also very happy that the engineering team can get back to focusing on features and customer requests, instead of being distracted by fire-fighting and baby-sitting scheduled maintenance periods.
 
