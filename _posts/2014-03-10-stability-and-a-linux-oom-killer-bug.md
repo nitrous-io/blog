@@ -102,6 +102,6 @@ Having gone through weeks of random outages and hairy on-call schedules, I am ex
 
 I'm also very happy that the engineering team can get back to focusing on features and customer requests, instead of being distracted by fire-fighting and baby-sitting scheduled maintenance periods.
 
-Want to get on Nitrous.IO service status and scheduled maintenance? Follow [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) .  Now with less updates than before, thanks to our new "less downtime" feature!
+Want to get on Nitrous.IO service status and scheduled maintenance? Follow [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) .  Now with fewer updates than before, thanks to our new "less downtime" feature!
 
 
