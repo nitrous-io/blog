@@ -5,9 +5,7 @@ author: chuyeow
 category: engineering
 ---
 
-We recently deployed a kernel patch to our servers that resolved a recurring stability issue. Our team is truly ecstatic to have solved this issue which has been troubling us for the past few months. Our customers rely on Nitrous.IO for their "always on" development box in the cloud, and these randomly-timed service outages have been a huge pain.
-
-We sincerely apologize to those of you who were inconvenienced by the recent outages. You deserve better and we'll do better. At this moment, we're just extremely happy to have stable servers once again.
+We recently deployed a kernel patch to our servers that resolved an occassional stability issue. Our team is truly ecstatic to have solved this issue. Our customers rely on Nitrous.IO for their "always on" development box in the cloud, and these randomly-timed service outages have been a huge pain.
 
 The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel.  As with many adventures, we inadvertently completed a number of side quests along the way.  While these may not have solved our immediate problem, they did help us level up and improve our systems, and we're happy to share those too.
 
@@ -96,7 +94,7 @@ The new kernel was deployed last week and things have been stable since then.
 
 #### Relief and what's next?
 
-Having gone through weeks of random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
+Having gone through random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
 
 I'm also very happy that the engineering team can get back to focusing on features and customer requests, instead of being distracted by fire-fighting and baby-sitting scheduled maintenance periods.
 
