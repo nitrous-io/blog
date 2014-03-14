@@ -5,9 +5,9 @@ author: chuyeow
 category: engineering
 ---
 
-We recently deployed a kernel patch to our servers that resolved an occassional stability issue. Our team is truly ecstatic to have solved this issue. Our customers rely on Nitrous.IO for their "always on" development box in the cloud, and these randomly-timed service outages have been a huge pain.
+We recently deployed a kernel patch to our servers that resolved a stability issue that affected some our customers. Our customers rely on Nitrous.IO for their "always on" development box in the cloud, and our team is ecstatic to have root caused and resolved these intermittent issues.
 
-The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel.  As with many adventures, we inadvertently completed a number of side quests along the way.  While these may not have solved our immediate problem, they did help us level up and improve our systems, and we're happy to share those too.
+The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel. As with many adventures, we inadvertently completed a number of side quests along the way. While these may not have solved our immediate problem, they did help us level up and improve our systems, and we're happy to share those too.
 
 TL;DR: there's a pretty serious race-related bug in the Linux OOM killer that's been fixed on the Linux mainline and 3.14 branch. If you're experiencing lockups where the OOM killer appears in your `kern.log`/`syslog` shortly before the lockup, you should patch your kernel.
 
@@ -37,7 +37,7 @@ Everyone on the engineering team had their pet theories and proposed solutions, 
 
 #### Theory #1: Xen hypervisor bug
 
-"It's an effing Xen bug" was often our conclusion of choice when throwing our hands in the air in frustration.  But bugtrackers showed that no one else had reported anything similar, so we decided we weren't unique snowflakes with oh-so-special use cases and moved on.
+"It's an effing Xen bug" was often our conclusion of choice. But bugtrackers showed that no one else had reported anything similar, so we decided we weren't unique snowflakes with oh-so-special use cases and moved on.
 
 #### Theory #2: User processes overloading the host
 
@@ -65,7 +65,7 @@ We'd initially set the [`vm.swappiness`]([Swappiness](http://en.wikipedia.org/wi
 
 ![Swap usage](/images/oom-killer/swap-usage-low.png)
 
-The theory was that an OOM condition on the host caused [kswapd](http://www.science.unitn.it/~fiorella/guidelinux/tlk/node39.html) to start swapping out too many pages, thus causing CPU utilization and disk utilization to spike.  At a `vm.swappiness` of 0, the kernel will swap only to avoid an out of memory condition.
+The theory was that an OOM condition on the host caused [kswapd](http://www.science.unitn.it/~fiorella/guidelinux/tlk/node39.html) to start swapping out too many pages, thus causing CPU utilization and disk utilization to spike. At a `vm.swappiness` of 0, the kernel will swap only to avoid an out of memory condition.
 
 We set `vm.swappiness` back to the default of 60 to encourage the kernel to use swap.
 
@@ -94,10 +94,10 @@ The new kernel was deployed last week and things have been stable since then.
 
 #### Relief and what's next?
 
-Having gone through random outages and hairy on-call schedules, I am extremely relieved that our users are no longer affected &mdash; unpredictable uptime is unacceptable.
+First, I am grateful that we have the right technical talent to explore the complex systems and squash the issue at the root so that our users are no longer affected by this .
 
-I'm also very happy that the engineering team can get back to focusing on features and customer requests, instead of being distracted by fire-fighting and baby-sitting scheduled maintenance periods.
+With stability back to our high expectation levels, I'm also very happy that the engineering team can get back to focusing on delighting customers with planned new features and customer requests.
 
-Want to get on Nitrous.IO service status and scheduled maintenance? Follow [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) .  Now with fewer updates than before, thanks to our new "less downtime" feature!
+You can stay on top of Nitrous.IO service status and scheduled maintenance by following [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) . 
 
 
