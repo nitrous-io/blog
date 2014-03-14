@@ -9,8 +9,6 @@ We recently deployed a kernel patch to our servers that resolved a recurring sta
 
 We sincerely apologize to those of you who were inconvenienced by the recent outages. You deserve better and we'll do better. At this moment, we're just extremely happy to have stable servers once again.
 
-INSERT PICTURE OF SORRY CAT
-
 The rest of this blog post is a technical postmortem and a log of our adventures trying to solve what ultimately turned out to be a bug in the Linux kernel.  As with many adventures, we inadvertently completed a number of side quests along the way.  While these may not have solved our immediate problem, they did help us level up and improve our systems, and we're happy to share those too.
 
 TL;DR: there's a pretty serious race-related bug in the Linux OOM killer that's been fixed on the Linux mainline and 3.14 branch. If you're experiencing lockups where the OOM killer appears in your `kern.log`/`syslog` shortly before the lockup, you should patch your kernel.
