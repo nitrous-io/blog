@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nitrous.IO raises 6.65M Series A financing from Bessemer Venture Partners
+title: Nitrous.IO raises $6.65M Series A financing from Bessemer Venture Partners
 author: aj
 category: announcements
 ---
