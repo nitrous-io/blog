@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset='utf-8'>
-  <title>{{ page.title }}</title>
-  <meta name="author" content="Nitrous.IO" />
+  <title>Nitrous.IO Blog - {{ page.title }}</title>
+  <meta name="author" content="{{page.author.display_name}}" />
+  {% if page.description%}
+  <meta name="description" content="{{page.description}}" />
+  {% else %}
+  <meta name="description" content="{{site.description}}" />
+  {% endif %}
+  <meta name="copyright" content="2014 Irrational Industries DBA Nitrous.IO" />
+  <link rel="canonical" href="{{site.production_url}}{{page.url}}" />
+  <meta property="og:url" content="{{site.production_url}}{{page.url}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:locale" content="en_US" />
+  {% if page.highlight_image %}
+  <meta property="og:image" content="{{site.production_url}}{{page.highlight_image}}" />
+  {% else %}
+  <meta property="og:image" content="{{site.production_url}}{{site.highlight_image}}" />
+  {% endif %}
+  {% if page.description%}
+  <meta property="og:description" content="{{page.description}}" />
+  {% else %}
+  <meta property="og:description" content="{{site.call_to_action}}" />
+  {% endif %}
+  <meta property="og:site_name" content="{{site.name}}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@nitrousio">
+  <meta name="twitter:title" content="{{page.title}}" />
+  {% if page.description%}
+  <meta name="twitter:description" content="{{page.description}}" />
+  {% else %}
+  <meta name="twitter:description" content="{{site.call_to_action}}" />
+  {% endif %}
+  <meta name="twitter:creator" content="{{page.author.twitter}}">
+  
   <link href="http://feeds.feedburner.com/NitrousIOBlog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-
   <link rel='stylesheet' href='/vendor/bootstrap3/css/bootstrap.css'>
   <link rel='stylesheet' href='/vendor/font-awesome/css/font-awesome.css'>
   <link href="/css/nitrousio.css" media="screen, projection" rel="stylesheet">

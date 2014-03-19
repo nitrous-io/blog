@@ -32,6 +32,9 @@ namespace :actionblog do
       out.puts("---")
       out.puts("layout: post")
       out.puts("title: #{blog_title}")
+      out.puts("highlight_image: Key Image for FB/Twitter")
+      out.puts("description: <200 Words")
+      out.puts("author: Your Name")
       out.puts("---")
       out.puts
 

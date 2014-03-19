@@ -4,6 +4,11 @@ auto: true
 markdown: rdiscount
 pygments: true
 paginate: 7
+production_url: http://blog.nitrous.io/
+name: Nitrous.IO's Cloud Development Blog
+description: Supercharged Cloud Development Environments for PHP, Ruby, Python, Go, and NodeJS
+call_to_action: Nitrous.IO - Get your Free PHP, Ruby, Python, Go, or NodeJS Cloud Development Environment Today
+highlight_image: images/flat-gauge-128.png
 exclude:
   - README.md
   - Rakefile
