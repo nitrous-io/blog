@@ -21,7 +21,7 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 <div style="overflow: auto;">
 	<div style="float:left;max-width:380px;padding-right:10px;">
 		<p>
-			We recently spoke with <a href="http://railsbridgenyc.org/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">RailsBridge NYC</a> whom used Nitrous.IO exclusively in their 2 day Workshop a couple weekends ago. RailsBridge is an organization which focus on increasing diversity in tech, and many of their workshops are to introduce Rails to women. The beginner workshops generally include students with little to no experience with computer programming topics, but there are also workshops where you will find programmers from a different backgrounds outside of Rails who are interested in broadening their knowledge base.
+			We recently spoke with <a href="http://railsbridgenyc.org/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">RailsBridge NYC</a> whom used Nitrous.IO exclusively in their 2 day Workshop a couple weekends ago. RailsBridge is an organization which focus on increasing diversity in tech, and many of their workshops are to introduce Rails to women. The beginner workshops generally include students with little to no experience with computer programming topics, but there are also workshops where you will find programmers from a different backgrounds outside of Rails who are interested in broadening their knowledge base.
 		</p>
 		<p>
 			Most workshops you attend will go over key points of the Ruby language, the MVC structure of Rails, and you will also build a sample app. There is an Installfest the day before in most occasions, but if Nitrous is utilized then you can start coding immediately :-)
@@ -31,13 +31,13 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		</p>
 		<ul>
 			<li>
-		    <a href="http://www.bridgetroll.org/events?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">RailsBridge</a>
+		    <a href="http://www.bridgetroll.org/events?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">RailsBridge</a>
 		  </li>
 		  <li>
-		    <a href="http://railsgirls.com/events?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails Girls</a>
+		    <a href="http://railsgirls.com/events?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails Girls</a>
 		  </li>
 		  <li>
-		    <a href="https://generalassemb.ly/education/introduction-to-ruby-on-rails-weekend-workshop?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">General Assembly</a>
+		    <a href="https://generalassemb.ly/education/introduction-to-ruby-on-rails-weekend-workshop?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">General Assembly</a>
 		  </li>
 		</ul>
 	</div>
@@ -56,26 +56,26 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 	If you are serious about becoming an expert Rails developer, you may want to dedicate some time (and money) into an academy. These academies range from hundreds of dollars for a course to thousands or dollars, and can last anywhere from 2 weeks to 12 weeks. Skill sets vary for each academy, but they generally start assuming you have little to no background with Ruby on Rails.
 </p>
 <p>
-	We've spoken with the guys at <a href="http://academy.st/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Startup Academy</a> who use Nitrous to help students get started quickly, and they gave us an insight on how their 8 week course works. Their goal is to help founders (or founders-to-be) learn a thing or two about building their own tech products. By equipping non-technical founders with some technical knowledge, their hope is to see more startups release their own minimum viable products and testing them in the market. Many of those who sign up are completely new to programming, but some have worked with other frameworks in the past. <a href="http://academy.st/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Startup Academy</a> is an in person academy located in Singapore, and more information on their Rails course can be found on the <a href="http://academy.st/courses/rails" target="_blank">enrollment page</a>.
-</p>		
-<p>	
+	We've spoken with the guys at <a href="http://academy.st/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Startup Academy</a> who use Nitrous to help students get started quickly, and they gave us an insight on how their 8 week course works. Their goal is to help founders (or founders-to-be) learn a thing or two about building their own tech products. By equipping non-technical founders with some technical knowledge, their hope is to see more startups release their own minimum viable products and testing them in the market. Many of those who sign up are completely new to programming, but some have worked with other frameworks in the past. <a href="http://academy.st/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Startup Academy</a> is an in person academy located in Singapore, and more information on their Rails course can be found on the <a href="http://academy.st/courses/rails" target="_blank">enrollment page</a>.
+</p>
+<p>
 	Here are some online academies you may be interested in:
 </p>
 <p>
 <ul>
   <li>
-    <a href="https://learn.thoughtbot.com/workshops/20-intro-to-ruby-on-rails?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">thoughtbot</a> (<a href="https://learn.thoughtbot.com/workshops/20-intro-to-ruby-on-rails?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">beginner</a> or <a href="https://learn.thoughtbot.com/workshops/21-intermediate-ruby-on-rails?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">intermediate</a>)
+    <a href="https://learn.thoughtbot.com/workshops/20-intro-to-ruby-on-rails?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">thoughtbot</a> (<a href="https://learn.thoughtbot.com/workshops/20-intro-to-ruby-on-rails?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">beginner</a> or <a href="https://learn.thoughtbot.com/workshops/21-intermediate-ruby-on-rails?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">intermediate</a>)
   </li>
   <li>
-    <a href="http://www.gotealeaf.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Tea Leaf Academy</a>
+    <a href="http://www.gotealeaf.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Tea Leaf Academy</a>
   </li>
   <li>
-    <a href="https://rubyoffrails.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Ruby Off Rails</a>
+    <a href="https://rubyoffrails.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Ruby Off Rails</a>
   </li>
 </ul>
 </p>
 <p>
-	For a directory of many more academies near you or online, give <a href="http://bootcamper.io/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">BootCamper</a> and <a href="http://coursereport.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Course Report</a> a visit. Both sites do an amazing job at organizing all of the in class and online academies, and will take away the stress of finding which course is the right one for you.
+	For a directory of many more academies near you or online, give <a href="http://bootcamper.io/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">BootCamper</a> and <a href="http://coursereport.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Course Report</a> a visit. Both sites do an amazing job at organizing all of the in class and online academies, and will take away the stress of finding which course is the right one for you.
 </p>
 
 ### Free (and Paid) Online Resources
@@ -90,26 +90,26 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		</p>
 		<ul>
 			<li>
-		    <a href="http://www.codecademy.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Codecademy</a> (interactive Ruby tutorials)
+		    <a href="http://www.codecademy.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Codecademy</a> (interactive Ruby tutorials)
 		  </li>
 		  <li>
-		    <a href="http://railsforzombies.org/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails for Zombies</a> (interactive Rails tutorials)
+		    <a href="http://railsforzombies.org/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails for Zombies</a> (interactive Rails tutorials)
 		  </li>
 		  <li>
-		    <a href="http://railscasts.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Railscasts</a> (Ruby/Rails related screencasts)
+		    <a href="http://railscasts.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Railscasts</a> (Ruby/Rails related screencasts)
 		  </li>
 		  <li>
-		    <a href="https://peepcode.com/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">PeepCode</a> (Ruby/Rails related screencasts)
+		    <a href="https://peepcode.com/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">PeepCode</a> (Ruby/Rails related screencasts)
 		  </li>
 		  <li>
-		    <a href="http://ruby.railstutorial.org/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Ruby on Rails Tutorial</a> (Ruby/Rails screencasts and book)
+		    <a href="http://ruby.railstutorial.org/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Ruby on Rails Tutorial</a> (Ruby/Rails screencasts and book)
 		  </li>
 		</ul>
 
 		<p>
-			Once you feel comfortable then you are ready to build your first app. Take a look at the <a href="http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails 4 guide</a> or <a href="http://www.sitepoint.com/nitrous-io-rails-development-cloud/?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Sitepoint's guide</a> to help build your first app on Nitrous.
+			Once you feel comfortable then you are ready to build your first app. Take a look at the <a href="http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Rails 4 guide</a> or <a href="http://www.sitepoint.com/nitrous-io-rails-development-cloud/?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Sitepoint's guide</a> to help build your first app on Nitrous.
 		</p>
-	</div>		
+	</div>
 	<p>
 			<img src="/images/rails-for-zombies.png" alt="Rails for Zombies" style="width:306px;float:left;margin:0 20px 20px 0;"/>
 	</p>
@@ -125,10 +125,10 @@ Keep this in mind while learning: If you are looking for a partner to collaborat
 		<p>
 			<ul>
 				<li>
-			    <a href="http://learn-rails.com/learn-ruby-on-rails.html?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Learn Ruby on Rails</a>
+			    <a href="http://learn-rails.com/learn-ruby-on-rails.html?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target="_blank">Learn Ruby on Rails</a>
 			  </li>
 			  <li>
-			    <a href="http://amzn.to/1iAMxoR" target="_blank">Ruby on Rails Tutorial</a> <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?utm_source=nitrousio&utm_medium=blog&utm_campaign=learn-rails-article" target"_blank">(HTML)</a>
+			    <a href="http://amzn.to/1iAMxoR" target="_blank">Ruby on Rails Tutorial</a> <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?utm_source=nitrous.io&utm_medium=blog&utm_campaign=learn-rails-article" target"_blank">(HTML)</a>
 			  </li>
 				<li>
 			    <a href="http://amzn.to/HrF7cn" target="_blank">The Ruby Programming Language</a> <a href="http://amzn.to/1hssivU" target="_blank">(Kindle)</a>
