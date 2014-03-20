@@ -71,6 +71,6 @@ If you wish to view your app directly on your domain (e.g. domain.com), run the 
 
 ### Behind a Firewall?
 
-Ports 1024 - 10,000 are available for previewing your app, but if you're inside a corporate or school network which blocks these ports then you may only be able to preview your app on port 80.
+If you're inside a corporate or school network which blocks these ports then you may only be able to preview your app on port 80.
 
 If this is the case then you will want to configure your app to run on port 3000. Each Nitrous box automatically forwards port 3000 to 80, so you can simply visit your custom domain without any ports specified within the URL.
