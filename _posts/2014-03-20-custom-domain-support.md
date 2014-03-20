@@ -17,7 +17,7 @@ Starting today, you can personalize that preview URL with your own custom domain
 
 This means you can send your clients to your domain name rather than something arbitrary like: `http://kings-landing-rails-14592.usw1.nitrous.io`
 
-So grab a Shift or Turbo level plan and let's setup your custom domain today.
+So grab a [Shift or Turbo level plan](https://www.nitrous.io/pricing) and let's setup your custom domain today.
 
 <!--break-->
 ### Getting Started
@@ -68,3 +68,9 @@ To preview your app with your domain, simply run the app within the console with
 Ports 1024 - 10,000 are open within your Nitrous box. To view the app on a specific port just add `:port-number` to the end of your domain when visiting it (e.g. your.domain.com:4000).
 
 If you wish to view your app directly on your domain (e.g. domain.com), run the app on port 3000. The Nitrous boxes automatically forward this to port 80, eliminating the need for specifying a port within the URI.
+
+### Behind a Firewall?
+
+Ports 1024 - 10,000 are available for previewing your app, but if you're inside a corporate or school network which blocks these ports then you may only be able to preview your app on port 80.
+
+If this is the case then you will want to configure your app to run on port 3000. Each Nitrous box automatically forwards port 3000 to 80, so you can simply visit your custom domain without any ports specified within the URL.
