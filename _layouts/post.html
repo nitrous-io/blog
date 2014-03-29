@@ -9,16 +9,16 @@ layout: default
     <h1 class="post-title"> {{ page.title }}</h1>
       <p class="text-muted">
         <time pubdate datetime="{{ page.date | date: "%d %B %Y" }}">
-          {{ page.date | date: "%d %B %Y" }} 
+          {{ page.date | date: "%d %B %Y" }}
             {% if author.display_name %}
               by <a href="https://www.twitter.com/{{author.twitter}}">{{ author.display_name }}</a>
             {% endif %}</time>
-      </p>              
+      </p>
     {{ content }}
   {% endif %}
 </div>
-
-{% include sharing.html %}
+{% assign post = page %}
+{% include sharing.html%}
 
 <div class="pnav clearfix">
   {% if page.next.url %}

@@ -2,7 +2,11 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset='utf-8'>
-  <title>Nitrous.IO Blog - {{ page.title }}</title>
+  {% if page.title !="Nitrous.IO Cloud Development Blog" %}
+  <title>{{ page.title }} - Nitrous.IO Blog</title>
+  {% else %}
+  <title>{{ page.title }}</title>
+  {% endif %}
   <meta name="author" content="{{page.author.display_name}}" />
   {% if page.description%}
   <meta name="description" content="{{page.description}}" />
@@ -35,7 +39,6 @@
   <meta name="twitter:description" content="{{site.call_to_action}}" />
   {% endif %}
   <meta name="twitter:creator" content="{{page.author.twitter}}">
-  
   <link href="http://feeds.feedburner.com/NitrousIOBlog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
