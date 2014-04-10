@@ -7,10 +7,10 @@ category: announcements
 ---
 
 On April 7 (Mon), the OpenSSL project released an update to address the
-[Heartbleed](http://heartbleed.com) vulnerability. This is a serious
-issue that lets a perpretator see 64KB chunks of memory on the server.
-There are reports that over 100,000 web servers on the Internet were
-found to be vulnerable.
+[Heartbleed](http://heartbleed.com) vulnerability. This is a serious issue that
+lets a perpretator see 64KB chunks of memory on the server.  [According to
+Netcraft](http://news.netcraft.com/archives/2014/04/08/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug.html),
+around half a million web servers on the Internet were found to be vulnerable.
 
 Nitrous.IO's web servers were running the latest version of OpenSSL and thus
 vulnerable.  We patched OpenSSL on all boxes and all our servers by 1AM PST on
@@ -18,6 +18,11 @@ Tuesday and confirmed that we were no longer vulnerable to attacks. We also
 re-keyed and re-issued our SSL certificates for all our web services.  After
 monitoring our servers until 4PM PST on Tuesday, we marked [the incident as
 resolved](http://status.nitrous.io/incidents/8r7lzpp0xfw6).
+
+There was a downtime period on Nitrous.IO on Monday when we spent time
+assessing the situation and patching our systems.  Our team believes that
+uptime while vulnerable is worse than no uptime at all, and acted accordingly.
+We apologize to any users affected by this unscheduled downtime.
 
 ## Next Steps
 
