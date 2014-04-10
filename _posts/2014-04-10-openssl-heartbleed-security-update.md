@@ -29,12 +29,13 @@ We apologize to any users affected by this unscheduled downtime.
 Even though it is highly unlikely that our systems were attacked before
 we deployed the patched OpenSSL libraries, we recommend taking some
 precautionary measures to make sure you protect yourself, including
-*changing your Nitrous.IO account password*.
+**[changing your Nitrous.IO account
+password](https://www.nitrous.io/app#/account_settings)**.
 
 If you are a Chrome user, we also recommend that you check the "Check for server certificate
 revocation" option under the "HTTPS/SSL" section in your Chrome browser settings.
 
-*Please Note:* This vulnerability did not affect SSH access so there is
+**Please Note:** This vulnerability did not affect SSH access so there is
 ro reason for you to remove your SSH keys from your boxes.
 
 ## Security at Nitrous.IO
