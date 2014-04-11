@@ -43,4 +43,4 @@ seriously. We are continuing to monitor the situation and will update
 our [status page](http://status.nitrous.io) and our
 [Twitter status account](https://twitter.com/n2ostatus) with any additional updates.
 
-For more information, please visit our [help site](https://help.nitrous.io).
+For more information, please visit our [help site](http://help.nitrous.io).
