@@ -1,3 +1,8 @@
 #!/bin/bash
+if [ $# -ne 1 ]
+then
+  echo "Usage ./script/server PORT"
+  exit 1
+fi
 
-bundle exec jekyll serve --watch --port 10000
+bundle exec jekyll serve --watch --port $1
