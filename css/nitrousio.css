@@ -29,6 +29,11 @@ h3 {
   margin: 32px 0 12px;
 }
 
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
 p img {
   max-width: 100%;
   height: auto;
@@ -211,4 +216,56 @@ p.caption {
 
 .gist .gist-file {
  margin-bottom: 4em;
+}
+
+ul.hack-partners {
+  margin: 20px 0 0;
+  list-style-type: none;
+}
+
+ul.hack-partners li.partner {
+  background: #242a30;
+  width: 266px;
+  margin: 0 20px 20px 0;
+  padding: 16px;
+  border: 1px solid #1d2327;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  float: left
+}
+
+ul.hack-partners li.partner:hover {
+  background: #282d34;
+  border-color: #2d3337;
+}
+
+ul.hack-partners li.partner .logo img {
+  float: left;
+  width: 80px;
+  max-width: 80px;
+}
+
+ul.hack-partners li.partner .repo-info {
+  padding-left: 100px;
+}
+
+ul.hack-partners li.partner .repo-info {
+}
+
+ul.hack-partners li.partner .repo-info .author a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #eee;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+}
+
+ul.hack-partners li.partner .repo-info .author a:hover {
+  color: #fff;
+}
+
+ul.hack-partners li.partner .repo-info .repo {
+  color: #989898;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
