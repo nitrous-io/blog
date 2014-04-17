@@ -24,7 +24,7 @@ Want other people to hack on your projects ? Adding a Hack button is simple and 
 1. Click any "Hack" button you see in a Github repository, blog post or e-book and start coding on that project immediately on Nitrous.IO.  It's really that easy.  Here's an example with [Meteor's](https://www.meteor.com/?{{page.utm}}) [telephone-pictionary](https://github.com/meteor/telephone-pictionary) app on Github.
 
 <br />
-[![Hack meteor/telephone-pictionary on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=meteor%2Ftelephone-pictionary&file_to_open=README.nitrous.md)
+[![Hack meteor/telephone-pictionary on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=meteor%2Ftelephone-pictionary&file_to_open=README.nitrous.md)
 
 ### Project Authors: Getting Started
 
