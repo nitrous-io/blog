@@ -55,13 +55,13 @@ First you will need to create a `_plugins/` folder in your blog directory, and p
 
 Next, create `~/workspace/blog/_layouts/category_index.html` and include the same code seen in the [Github Repo](https://raw.github.com/recurser/jekyll-plugins/master/_layouts/category_index.html).
 
-To see this plugin in action, cd into `~/workspace/blog/` and run `jekyll serve`. In your web IDE, navigate to `Preview > Port 4000`. 
+To see this plugin in action, cd into `~/workspace/blog/` and run `jekyll serve`. In your web IDE, navigate to `Preview > Port 4000`.
 
 When you see the Jekyll blog, append `/categories/jekyll/` to the end of the address bar to see the new category page.
 
 ![Jekyll Category Page](/images/jekyll_category.png)
 
-When creating new posts in `~/workspace/blog/_posts/`, be sure to include the `categories:` property in the top of each post, as this will add the post within the appropriate subfolders. 
+When creating new posts in `~/workspace/blog/_posts/`, be sure to include the `categories:` property in the top of each post, as this will add the post within the appropriate subfolders.
 
 Looking at the header below of the sample post, it will be placed in `/categories/jekyll` as well as `/categories/update`.
 
@@ -100,7 +100,7 @@ You will need to create a Rakefile which will generate static content for Github
 		task :publish => [:generate] do
 		  Dir.mktmpdir do |tmp|
 		    system "mv _site/* #{tmp}"
-		    system "git checkout -b gh-pages"
+		    system "git checkout -B gh-pages"
 		    system "rm -rf *"
 		    system "mv #{tmp}/* ."
 		    message = "Site updated at #{Time.now.utc}"
