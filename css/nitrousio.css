@@ -269,3 +269,7 @@ ul.hack-partners li.partner .repo-info .repo {
   font-size: 12px;
   margin-bottom: 20px;
 }
+
+.IN-widget {
+  vertical-align: top !important;
+}
