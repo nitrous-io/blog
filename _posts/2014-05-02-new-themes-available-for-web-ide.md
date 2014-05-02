@@ -10,7 +10,7 @@ Light on Dark Theme is great for working in the Nitrous.IO Product Cave
 but we know that some of you want to project your Nitrous.IO environment
 or perhaps have a different preference.
 
-Now you can now switch the color scheme for the Nitrous.IO editor.
+You can now switch the color scheme for the Nitrous.IO editor.
 
 ![Web IDE Themes](/images/web-ide-themes.png)
 
