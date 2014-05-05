@@ -5,13 +5,9 @@ author: lakshan
 category: learning
 ---
 
-I've been spending some of my free time learning [Clojure](http://clojure.org/) in the past two months.
-If you haven't heard of Clojure, it is a dialect of LISP. Clojure is a great way to pick up functional programming concepts by using them in real-life applications.
-Another interesting point about Clojure is how it can be compiled to both JVM bytecode and [JavaScript](https://github.com/clojure/clojurescript).
-This means it can be used to write both server-side and client-side applications.
+I've been spending some of my free time learning [Clojure](http://clojure.org/) in the past two months.  If you haven't heard of Clojure, here's the elevator pitch: it is a dialect of LISP, a great way to pick up functional programming, and can be compiled to both JVM bytecode and [JavaScript](https://github.com/clojure/clojurescript).  This makes it a viable language for writing both server-side and client-side applications.
 
-When I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java in my machine!". Then I realized this is exactly why we have [Nitrous.IO](https://nitrous.io).
-With Nitrous.IO, I can start off with a clean-slate development environment tailored for Clojure itself. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward. (Random Fact: we'll soon be offering more customisable templates).
+Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java in my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
 
 Let's pick any existing template for now and create a new box. All templates comes with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
 
@@ -43,11 +39,11 @@ Run, `lein repl` in the console:
     -- displays the source of `+` function.
 ```
 
-**Tip:** If you feel the REPL is kinda laggy, it's because JVM processes consume more resources. I recommend you upgrade to a [paid plan](https://nitrous.io/pricing), which will give your box more CPU share and memory.
+**Tip:** If you feel the REPL is kinda laggy, it's because JVM processes consume more resources.  Upgrading to a [paid plan](https://nitrous.io/pricing) will give your box the extra CPU share and memory goodies the JVM is so hungry for.
 
 ## Trying Clojure Koans
 
-Playing around with a REPL is a good start. But I prefer a more structured guide to get acquainted with a language. I found following [Clojure Koans](http://clojurekoans.com/) to be the perfect way to do this.
+Playing around with a REPL is a good start, but I prefer a more structured approach to getting acquainted with a language. I found following [Clojure Koans](http://clojurekoans.com/) to be the perfect way to do this.
 
 To try out Clojure Koans, start by cloning its repository into your box:
 
