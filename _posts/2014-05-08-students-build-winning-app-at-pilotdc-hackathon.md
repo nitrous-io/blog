@@ -8,7 +8,7 @@ category: interviews
 
 Michael Reininger, one of three students attending Montgomery Highschool in New Jersey, reached out to us recently to tell us about their success with using [Nitrous.IO](https:/www.nitrous.io?{{page.utm}}).
 
-Last March they participated at the [PilotDC hackathon](http://dc.gopilot.org/). This was their first hackathon, and they needed a strategy on building an app within 24 hours. To build an app within this timeframe they decided to code on [Nitrous.IO](https://www.nitrous.io?{{page.utm}}). We talked to Michael and got the full story on how his team became great developers early on, and how they used Nitrous.IO to build the winning app.
+Last March they participated at the [PilotDC hackathon](http://dc.gopilot.org/). Being their first hackathon, they needed to form a strategy on building an app within 24 hours. To build an app within this timeframe they decided to code on [Nitrous.IO](https://www.nitrous.io?{{page.utm}}). We talked to Michael and got the full story on how his team became great developers early on, and how they used Nitrous.IO to build the winning app.
 
 ![Michael Reininger DC Hackathon](/images/Michael_Reininger_DC_Hackathon.jpg)
 ##### *From left to right: Matthew Risley, Michael Reininger, and Sri Velagapudi*
