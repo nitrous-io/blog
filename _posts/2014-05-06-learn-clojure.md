@@ -3,7 +3,7 @@ layout: post
 title: "Learning Clojure with Nitrous.IO"
 author: lakshan
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=learning_clojure
-category: learning
+category: tutorials
 ---
 
 I've been spending some of my free time learning [Clojure](http://clojure.org/) in the past two months.  If you haven't heard of Clojure, here's the elevator pitch: it is a dialect of LISP, a great way to pick up functional programming, and can be compiled to both JVM bytecode and [JavaScript](https://github.com/clojure/clojurescript).  This makes it a viable language for writing both server-side and client-side applications.
