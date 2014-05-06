@@ -7,7 +7,7 @@ category: learning
 
 I've been spending some of my free time learning [Clojure](http://clojure.org/) in the past two months.  If you haven't heard of Clojure, here's the elevator pitch: it is a dialect of LISP, a great way to pick up functional programming, and can be compiled to both JVM bytecode and [JavaScript](https://github.com/clojure/clojurescript).  This makes it a viable language for writing both server-side and client-side applications.
 
-Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java in my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
+Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java on my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
 
 Let's pick any existing template for now and create a new box. All templates comes with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
 
@@ -83,5 +83,5 @@ Once the server is started, you can preview the app by selecting `Preview` > `30
 
 ## More resources
 
-There's plenty of resources available online to learn [Clojure](http://clojure.org/documentation).
+There are plenty of resources available online to learn [Clojure](http://clojure.org/documentation).
 I personally recommend following the [presentations by Rich Hickey](https://www.youtube.com/playlist?list=PLZdCLR02grLrEwKaZv-5QbUzK0zGKOOcr) (the creator of Clojure), which give good insight on how to approach problems in a functional way.
