@@ -2,14 +2,15 @@
 layout: post
 title: "Learning Clojure with Nitrous.IO"
 author: lakshan
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=leanring_clojure
 category: learning
 ---
 
 I've been spending some of my free time learning [Clojure](http://clojure.org/) in the past two months.  If you haven't heard of Clojure, here's the elevator pitch: it is a dialect of LISP, a great way to pick up functional programming, and can be compiled to both JVM bytecode and [JavaScript](https://github.com/clojure/clojurescript).  This makes it a viable language for writing both server-side and client-side applications.
 
-Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java on my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
+Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java on my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io?{{page.utm}}), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
 
-Let's pick any existing template for now and create a new box. All templates comes with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
+Let's pick any box template for now and [create a new box](https://www.nitrous.io/app#/boxes/new). All templates comes with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
 
 Before trying to manually install Clojure, let's see if it's already available as an Autoparts package in Nitrous.IO. Autoparts is Nitrous.IO's own package manager.  It provides an easy way to install tools/libraries.
 
@@ -39,7 +40,7 @@ Run, `lein repl` in the console:
     -- displays the source of `+` function.
 ```
 
-**Tip:** If you feel the REPL is kinda laggy, it's because JVM processes consume more resources.  Upgrading to a [paid plan](https://nitrous.io/pricing) will give your box the extra CPU share and memory goodies the JVM is so hungry for.
+**Tip:** If you feel the REPL is kinda laggy, it's because JVM processes consume more resources.  Upgrading to a [paid plan](https://nitrous.io/pricing?{{page.utm}}) will give your box the extra CPU share and memory goodies the JVM is so hungry for.
 
 ## Trying Clojure Koans
 
@@ -79,9 +80,11 @@ Then go to the sample app directory and run the following commands to start the 
     lein cljsbuild once
     lein ring server-headless 3000
 
-Once the server is started, you can preview the app by selecting `Preview` > `3000` in the IDE menu.
+Once the server is started, you can preview the app by selecting `Preview` > `3000` in the IDE menu. If we do some changes to the sample app code, we can see the generated JavaScript also changes accordingly.
 
-## More resources
+## Moving on...
 
-There are plenty of resources available online to learn [Clojure](http://clojure.org/documentation).
+If this introduction made you want to dig deeper into Clojure, there are plenty of [resources](http://clojure.org/documentation) to guide you.
 I personally recommend following the [presentations by Rich Hickey](https://www.youtube.com/playlist?list=PLZdCLR02grLrEwKaZv-5QbUzK0zGKOOcr) (the creator of Clojure), which give good insight on how to approach problems in a functional way.
+
+We are excited to see what kind of Clojure projects you are going to build on [Nitrous.IO](https://nitrous.io?{{page.utm}}). Feel free to share your work with us either via [Twitter](https://twitter.com/nitrousio) or [Email](support@nitrous.io).
