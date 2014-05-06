@@ -18,6 +18,8 @@ In the IDE menu , go to `Autoparts` > `Manage Packages...` and search for 'Cloju
 
 ![Searching for Clojure from Manage Autoparts dialog](/images/search_autoparts_clojure.png)
 
+<!--break-->
+
 ## What is Leiningen?
 
 [Leiningen'](http://leiningen.org/) is a popular tool for automating Clojure tasks.  In my brief experience with it, I've come to see it as a super-tool which combines RVM, RubyGems, Bundler, and Rake.
