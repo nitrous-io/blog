@@ -2,7 +2,7 @@
 layout: post
 title: "Learning Clojure with Nitrous.IO"
 author: lakshan
-utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=leanring_clojure
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=learning_clojure
 category: learning
 ---
 
