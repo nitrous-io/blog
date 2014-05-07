@@ -6,15 +6,17 @@ utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=customizing_box_start
 category: announcements
 ---
 
-If you have custom scripts or programs that you want to run whenever a box is
+If you have custom scripts or programs that you want to run every time a box is
 started, the `.nitrousboxrc` file is the right place to add them.
 
-Do note that services installed with `parts` are already set up to run on box
+Services installed with `parts` are already set up to run on box
 start, so you wouldn't have to do anything extra to get them running.
 
 The up-to-date instructions for using `.nitrousboxrc` will always be found in
 the `.nitrousboxrc.sample` file in your home directory.  To view it in the IDE,
-be sure to click the `Show Hidden` button.
+click the `Show Hidden` button.
+
+### Getting Started
 
 The steps are pretty straightforward.  In your terminal, run
 
@@ -28,7 +30,9 @@ The steps are pretty straightforward.  In your terminal, run
 You can then edit the `.nitrousboxrc` file by adding your commands after the
 comment `# Add your commands here`.
 
-Can't think of any use cases for this?  The examples below can get you started.
+Here are some common examples that you can use today:
+
+<!--break-->
 
 ### Example 1: keeping repositories up to date
 
