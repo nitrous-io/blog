@@ -10,7 +10,7 @@ I've been spending some of my free time learning [Clojure](http://clojure.org/) 
 
 Back when I first wanted to get my hands dirty with Clojure, my immediate reaction was "Eww... I don't want to install Java on my machine!". Then I realized this use case is a perfect fit for [Nitrous.IO](https://nitrous.io?{{page.utm}}), where I can start off with a clean-slate development environment. Though Nitrous.IO doesn't offer a ready-made Clojure template, setting up a Clojure environment is straightforward.
 
-Let's pick any box template for now and [create a new box](https://www.nitrous.io/app#/boxes/new). All templates comes with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
+Let's pick any box template for now and [create a new box](https://www.nitrous.io/app#/boxes/new). All templates come with Java 1.7 pre-installed. That satisfies the first requirement for trying Clojure.
 
 Before trying to manually install Clojure, let's see if it's already available as an Autoparts package in Nitrous.IO. Autoparts is Nitrous.IO's own package manager.  It provides an easy way to install tools/libraries.
 
