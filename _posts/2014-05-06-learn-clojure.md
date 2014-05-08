@@ -31,7 +31,6 @@ Once we have installed Leiningen, we can use its REPL to get our first taste of 
 
 Run, `lein repl` in the console:
 
-```
     user=> (+ 1 2 3)
     6
 
@@ -40,7 +39,6 @@ Run, `lein repl` in the console:
 
     (source +)
     -- displays the source of `+` function.
-```
 
 **Tip:** If you feel the REPL is kinda laggy, it's because JVM processes consume more resources.  Upgrading to a [paid plan](https://nitrous.io/pricing?{{page.utm}}) will give your box the extra CPU share and memory goodies the JVM is so hungry for.
 
