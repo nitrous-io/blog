@@ -13,7 +13,7 @@ Michael Reininger, Matthew Risley, and Sri Velagapudi formed a team to participa
 
 ### What was your experience with coding before using Nitrous?
 
-My friends and I have self-taught ourselves how to code through watching videos on YouTube and reading programming blogs. After publishing several iPhone apps and developing various websites for our local customers, we felt like it was time to test our skills at programming in an environment different from our basement and classroom.
+My friends and I have taught ourselves how to code through watching videos on YouTube and reading programming blogs. After publishing several iPhone apps and developing various websites for our local customers, we felt like it was time to test our skills at programming in an environment different from our basement and classroom.
 
 We were already familiar with the college hackathon scene, however, we didn't expect it to reach high schools by the time we would graduate. Fortunately, we came across an ad for a high school hackathon in Washington D.C. called [PilotDC](http://dc.gopilot.org/). Immediately, we signed up and eagerly planned our trip to the nation's capitol.
 
