@@ -1,8 +1,7 @@
 relative_permalinks: true
 permalink: /:year/:month/:day/:title.html
-auto: true
 markdown: rdiscount
-pygments: true
+highlighter: true
 paginate: 7
 production_url: http://blog.nitrous.io
 name_tag: Nitrous.IO Blog
@@ -49,3 +48,7 @@ authors:
     name: Chu Yeow
     display_name: Chu Yeow
     twitter: chuyeow
+  tim:
+    name: Tim
+    display_name: Tim
+    twitter: keyist
