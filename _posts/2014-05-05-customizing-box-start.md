@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Customizing Box Start with nitrousboxrc"
-author: greg
+author: tim
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=customizing_box_start
 category: announcements
 ---
@@ -20,10 +20,8 @@ click the `Show Hidden` button.
 
 The steps are pretty straightforward.  In your terminal, run
 
-```
-  cp ~/.nitrousboxrc.sample ~/.nitrousboxrc
-  chmod +x ~/.nitrousboxrc
-```
+    cp ~/.nitrousboxrc.sample ~/.nitrousboxrc
+    chmod +x ~/.nitrousboxrc
 
 *Note: the .nitrousboxrc.sample and .nitrousboxrc files have a period/dot as their first character.*
 
@@ -41,11 +39,9 @@ and have it checked out in `$HOME/oh-my-zsh`.
 
 Edit the relevant section of your `.nitrousboxrc` file so that it looks like below:
 
-```
-# The line below is recommended so that any errors will stop the script.
-set -e
-cd ~/oh-my-zsh && git pull --rebase origin master
-```
+    # The line below is recommended so that any errors will stop the script.
+    set -e
+    cd ~/oh-my-zsh && git pull --rebase origin master
 
 Remember to make the `.nitrousboxrc` file executable from your shell with:
 
@@ -55,13 +51,11 @@ Now whenever your box is started, the repository will be updated.
 
 You can verify your changes by restarting your box and viewing the `.nitrousboxrc.log` file.  You should see something similar to below:
 
-```
-2014-05-05 03:44:49 : Starting /home/action/.nitrousboxrc
-From https://github.com/robbyrussell/oh-my-zsh
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-2014-05-05 03:44:54 : Finished /home/action/.nitrousboxrc
-```
+    2014-05-05 03:44:49 : Starting /home/action/.nitrousboxrc
+    From https://github.com/robbyrussell/oh-my-zsh
+     * branch            master     -> FETCH_HEAD
+    Current branch master is up to date.
+    2014-05-05 03:44:54 : Finished /home/action/.nitrousboxrc
 
 ### Example 2: making some files publicly accessible
 
@@ -74,11 +68,9 @@ private keys publicly accessible**
 Edit the relevant section of your `.nitrousboxrc` file so that it looks like
 below:
 
-```
-# The line below is recommended so that any errors will stop the script.
-set -e
-cd ~/public && python -m SimpleHTTPServer 8080 &
-```
+    # The line below is recommended so that any errors will stop the script.
+    set -e
+    cd ~/public && python -m SimpleHTTPServer 8080 &
 
 Note the `ampersand (&)` at the end of the command to make it run in the
 background.  This is necessary so that subsequent commands (if present) will
@@ -86,7 +78,7 @@ run.
 
 Remember to make the `.nitrousboxrc` file executable from your shell with:
 
-`chmod +x ~/.nitrousboxrc`
+    chmod +x ~/.nitrousboxrc
 
 Now restart your box, and choose `Port 8080` from the preview menu.  It will
 display the contents of your `$HOME/public` folder, which can be downloaded by
@@ -98,12 +90,12 @@ The output of `.nitrousboxrc` can be viewed in `.nitrousboxrc.log`.  Over time
 this file can grow and take up a significant amount of disk space.  To clear
 the file's contents, simply run the following in the terminal:
 
-`> ~/.nitrousboxrc.log`
+    > ~/.nitrousboxrc.log
 
 
 ### Q & A
 
-#### How is this different from my bashrc/zshrc file?
+#### Q: How is this different from my bashrc/zshrc file?
 
 The bashrc file is run with every new console started, not just on box start.
 You will have to add checks to commands you only want to run once per box start
