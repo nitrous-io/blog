@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing SSL Previews & Autoparts in the UI
+title: Introducing SSL Previews and Autoparts in the UI
 author: sandeep
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=introautopartspreviewssl
 category: announcements

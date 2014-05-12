@@ -21,7 +21,6 @@ The initial response from the development community has been astounding.  Nitrou
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" lang="en"><p>For <a href="https://twitter.com/skylightio">@skylightio</a>, we use Java, Rails, Postgres, Cassandra &amp; Ember. Pretty cool to be able to hack on that stack in a browser with <a href="https://twitter.com/NitrousIO">@NitrousIO</a>.</p>&mdash; Tom Dale (@tomdale) <a href="https://twitter.com/tomdale/statuses/362707886868152320">July 31, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Developers at companies like Heroku, Hashrocket, and Balanced Payments use Nitrous.IO to snapshot development environments to share with their teams, and to collaborate on code in real-time.  But it's not just the big names. All in all, developers have edited code in over 3 million files on the platform and have saved over 500,000 hours in setup and configuration costs.  Professors at major universities like UC Berkeley and NYU are using the platform to provide standard environments for their students to build applications.
 
