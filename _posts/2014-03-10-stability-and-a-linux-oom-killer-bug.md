@@ -94,10 +94,10 @@ The new kernel was deployed last week and things have been stable since then.
 
 #### Relief and what's next?
 
-First, I am grateful that we have the right technical talent to explore the complex systems and squash the issue at the root so that our users are no longer affected by this .
+First, I am grateful that we have the right technical talent to explore the complex systems and squash the issue at the root so that our users are no longer affected by this.
 
 With stability back to our high expectation levels, I'm also very happy that the engineering team can get back to focusing on delighting customers with planned new features and customer requests.
 
-You can stay on top of Nitrous.IO service status and scheduled maintenance by following [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io) . 
+You can stay on top of Nitrous.IO service status and scheduled maintenance by following [@N2OStatus on Twitter](https://twitter.com/n2ostatus) or get updates on our [status page](http://status.nitrous.io).
 
 
