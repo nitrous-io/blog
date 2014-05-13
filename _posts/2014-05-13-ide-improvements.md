@@ -9,14 +9,13 @@ description: Improvements and changes to the Nitrous.IO Web IDE. Autocompletion 
 ---
 
 At Nitrous.IO, we like to say that our Web IDE is the easiest way to code in
-your web browser. While that's mostly true™, the Web IDE had a pretty limited
-feature set &mdash; there was no autocompletion, no linting and even little
-things like a shortcut key to comment out blocks of code weren't available.
+your web browser. Today, we're happy to announce we shipped many of the great IDE
+improvements you've been waiting for.
 
 ![Web IDE in action on some Golang code](/images/ide/web-ide-golang-martini-code.png)
 
-Today, we shipped a bunch of features to the IDE that most of you have been
-requesting.
+Here are some of the great new features that are available in the IDE,
+today:
 
 <!--break-->
 
