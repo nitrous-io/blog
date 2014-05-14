@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[N] Hack Bookmarklet"
+title: "Hack on Nitrous.IO Bookmarklet"
 author: sandeep
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=hack_bookmarklet
 category: announcements
@@ -31,6 +31,8 @@ owner hasn't yet included a Hack Button. You can [get the bookmarklet here.](htt
 ### Installation:
 
 To install the bookmarklet simply drag the yellow button to your Browser's *Bookmarks Bar.*
+
+![Installing the Hack Bookmarklet](/images/add_bookmarklet.gif)
 
 ### Using the Bookmarklet:
 
