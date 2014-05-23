@@ -64,11 +64,15 @@ the future, particularly use cases for migrating existing services to Go.
 
 ## Where to go from here
 
-For news on future Go meetups in Singapore, do join the [Singapore Gophers
-Facebook group](https://www.facebook.com/groups/golang.sg/) .
+Find your local Go user group!  The [Go language community
+wiki](https://code.google.com/p/go-wiki/wiki/GoUserGroups) has a comprehensive
+list.  For news on future Go meetups in Singapore, do join the [Singapore
+Gophers Facebook group](https://www.facebook.com/groups/golang.sg/).
 
-We hope to have other community members give talks at future meetups, so please email us at [hello+golang@nitrous.io](mailto:hello+golang@nitrous.io) with proposals or ideas.
+We hope to have other community members give talks at future meetups, so please
+email us at [hello+golang@nitrous.io](mailto:hello+golang@nitrous.io) with
+proposals or ideas.
 
 If you want to try out Go without having to spend time installing it locally,
-You can [sign up](https://www.nitrous.io?{{ page.utm }}) with Nitrous.IO for a
+you can [sign up](https://www.nitrous.io?{{ page.utm }}) with Nitrous.IO for a
 free development box in the cloud with Go pre-installed.
