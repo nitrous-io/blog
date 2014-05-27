@@ -1,0 +1,619 @@
+---
+layout: post
+title: Getting Started with Elixir and Nitrous.IO
+author: benjamin
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=into_to_elixir
+category: tutorials
+---
+
+When you combine a magical potion with a compound that gives engines an additional boost, you know the result is going to be nothing short of awesome. In this article, I will introduce [Elixir](http://elixir-lang.org/). Instead of going through the basics (read: the boring stuff), we will learn how to implement a _distributed_ system that will find large primes – all within Nitrous.IO.
+
+## What is Elixir?
+
+Before we get ahead of ourselves, here is how Elixir describes itself:
+
+![](images/elixir-logo.png)
+
+> Elixir is a functional, meta-programming aware language built on top of the Erlang VM. It is a dynamic language that focuses on tooling to leverage Erlang's abilities to build concurrent, distributed and fault-tolerant applications with hot code upgrades.
+
+## Getting Elixir on Nitrous.IO
+
+Setting up a development environment can be a huge pain, or at the very least, a time consuming affair. Nitrous.IO takes away a lot of this pain.
+
+Assuming that you have already logged in, the next step would be to create a new box: 
+
+![](images/new_box.png)
+
+Then, fill out a _name_ (i.e.: `elixir-demo`), select your closest region and then go ahead and press "Create Box". 
+
+![](images/create_box.png)
+
+Notice that there isn't an Elixir template. In fact, you could pick _any_ template you want, because of a very nifty Nitrous.IO feature – [Autoparts](http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html).
+
+### Installing the Elixir Autopart
+
+Once Nitrous.IO has completed provisioning your new box, you will be greeted by a nice IDE/terminal interface:
+
+![](images/ide.png)
+
+To install the Elixir autopart, first select `Autoparts` in the top menu, followed by `Manage Packages`. Next, simply search for "elixir" and hit install:
+
+![](images/autopart.png)
+
+Installation for me took less than 5 minutes. When the install has completed, you will see this:
+
+![](images/autopart_done.png)
+
+You can now go ahead and click done and close the window. We can check if the install went smoothly at the console by checking for the version of Elixir installed:
+
+```
+action@elixir-demo-115908:~$ elixir -v
+Elixir 0.13.1
+```
+
+Woot! Not too shabby for less than 5 minutes of work.
+
+## _Just Enough_ Elixir
+
+Before we get to the fun bits, let's go through some of the most important Elixir concepts that will let you understand the code a bit better later on. 
+
+### Processes and the Actor Concurrency Model
+
+Erlang (and therefore Elixir) uses the Actor Concurrency Model. This means
+that:
+
+1. Each actor is a process.
+2. Each process performs a specific task.
+3. To tell a process to do something, you need to send it a message. The process can also reply by sending back another message.
+4. The kinds of messages the process can act upon is specific to the process
+itself. In other words, messages are pattern matched.
+5. Other than that, processes do not share any information with other processes.
+
+A code example will help here. In the IDE, right-click on `workspace` and select `New File`. Name the file `shouter.ex`. Then fill in the contents of `shouter.ex` with:
+
+```elixir
+defmodule Shouter do
+
+  def start do
+    spawn(__MODULE__, :loop, [])
+  end
+
+  def send_message(to_pid, from_pid, msg) do
+    send(to_pid, {from_pid, msg})
+  end
+
+  def loop do
+    receive do
+      {sender_pid, msg} ->
+      IO.puts "#{inspect sender_pid} said: #{String.upcase msg}!!!"
+    end
+    loop
+  end
+
+end
+```
+
+Next, hit `Save`, (Don't forget this step!)
+
+Nitrous.IO currently doesn't come with syntax highlighting for Elixir, but I found Ruby to be a pretty close match. 
+
+Now let's try to execute this program. Elixir comes with its own interactive prompt called `iex`. It is the equivalent if `irb` (if you are a Rubyist) or `node` (if you are a hipster).
+
+In the console, navigate to the workspace directory and run the program:
+
+```
+action@elixir-demo-115908:~$ cd workspace/ 
+action@elixir-demo-115908:~/workspace$ iex shouter.ex
+Erlang/OTP 17 [erts-6.0] [source] [64-bit]
+Interactive Elixir (0.13.1) - press Ctrl+C to exit (type h() ENTER for help)                                     
+iex(1)>       
+```
+
+Let's see how this program works. Let's create a `Shouter` process:
+
+```
+iex(1)> w1 = Shouter.start
+#PID<0.48.0>  
+```
+
+Congratulations! You have just created your first Elixir process. The return value is the process id, or _pid_ for short. Unsurprisingly, `w1` also contains the pid to this newly created process. Note that you will most likely have a different pid compared to the examples. Pids serve as a _reference_ to processes. You can think of it like object references in object-oriented programming languages such as Ruby or Java.
+
+Let's take a close look at the `start` function:
+
+```elixir
+defmodule Shouter do
+
+  def start do
+    spawn(__MODULE__, :loop, [])
+  end
+  
+  # ...
+end
+```
+
+In Elixir, processes are created using the `spawn` built-in function. It takes in a _module_, which is represented here by `__MODULE__`. This expands to `Shouter` in this example. The second argument is the `function`, followed by the list of arguments to pass to the function. In this case, since `loop` does not take in any arguments, we pass in an empty list. (We will see what `loop` does shortly.) As noted previously, the return value of the `spawn` function is a pid.
+
+Let's go ahead and create another process. 
+
+```
+iex(2)> w2 = Shouter.start
+#PID<0.50.0>  
+```
+
+Recall that processes communicate with each other by sending messages. Let's do that now. We will send a message _from_ `w1` to `w2`: 
+
+```
+iex(3)> Shouter.send_message(w1, w2, "Ohai, NitrousIO!")
+#PID<0.50.0> said: Ohai, NitrousIO!
+{#PID<0.50.0>, "OHAI, NITROUSIO!!!!"}  
+```
+
+You could even send a message to the same process:
+
+```
+iex(4)> Shouter.send_message(w1, w1, "I'm so lonely ...") 
+#PID<0.48.0> said: I'm so lonely ...
+{#PID<0.48.0>, "I'M SO LONELY ...!!!"}
+```
+
+#### Sending Messages
+
+Now, we can take a close look at `send_message` and `loop`.
+
+```elixir
+def send_message(to_pid, from_pid, msg) do
+  send(to_pid, {from_pid, msg})
+end
+```
+
+Send message is a thin wrapper for `send`, another built-in function. The first argument of send is the pid of the process you want to send the message to. The second argument, is the process. The message can be a variety of things. It could be a string, a number, another pid, or in this case, a tuple. Tuples are data types which can contain things of potentially different types. In this case, our message is a tuple that contains a pid followed by a message.
+
+So far, we've covered the sending part. Now, let's see how messages are _received_.
+
+#### Receiving Messages
+
+Recall how a process is started. First, we call the `start` function, which then calls the `spawn` function. The `spawn` function executes a function that runs in the newly created process. In our case, this function that runs in the newly created process is `loop`:
+
+```elixir
+def loop do
+  receive do
+    {sender_pid, msg} ->
+      IO.puts "#{inspect sender_pid} said: #{String.upcase msg}!!!"
+  end
+  loop
+end
+```
+
+Incoming messages are processed in a `receive` block. When a message is received, it is _pattern matched_. Pattern matching in this case means that the "shape" of incoming message is compared with the pattern defined within the message block. In `loop`, for example, we will only process messages that are 2 element tuples.
+
+Notice that after the process is `receive`-ed, `loop` is recursively called. This is needed because if the recursive call is omitted, then the process will exit since there is nothing left to do, and subsequently be garbage collected.
+
+In order to facilitate back and forth communication with the sender and receiver, messages must include the pids within the message payload. 
+
+To let this sink, create a new file called `echo.ex`:
+
+```elixir
+defmodule Echo do
+
+  def start do
+    spawn(__MODULE__, :loop, [])
+  end
+
+  def send_message(to_pid, from_pid, msg) do
+    send(to_pid, {from_pid, msg})
+  end
+
+  def loop do
+    receive do
+      {sender_pid, msg} ->
+        IO.puts "#{inspect sender_pid} said: #{msg}"
+        send(sender_pid, {self, msg})
+    end
+    loop
+  end
+
+end
+```
+
+It is almost the same as `Shouter`, with the exception that when a message is received, not only a message is printed out, but the sender is replied with another message, `{self, msg}`. `self` is the pid of the current process, i.e. the process which received the initial message.
+
+(To quit from `iex`, press `Ctrl` and `C` twice.)
+
+Let's run `echo.ex`:
+
+```
+action@elixir-demo-115908:~/workspace$ iex echo.ex 
+iex(1)> w1 = Echo.start 
+#PID<0.48.0> 
+iex(2)> w2 = Echo.start
+#PID<0.50.0> 
+```
+
+Can you guess what happens if we were to send a message from `w1` to `w2`?
+
+```
+iex(3)> Echo.send_message(w1, {w2 "To infinity ... and beyond!"})
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+#PID<0.48.0> said: To infinity ... and beyond!
+#PID<0.50.0> said: To infinity ... and beyond!
+...
+```
+
+Oops. To exit, `Ctrl` and `C` twice again.
+
+## Distributed Elixir
+
+Now the _real_ fun begins. Elixir is great for building distributed systems. One of the reasons for this is _location transparency_ of pids. This means that it doesn't matter to the programmer if the message being sent to a process lives on a local or remote node.
+
+### What We will be Building
+
+We will build a _distributed_ system that check for prime numbers. In order to demonstrate this, we make use of Elixir's (the Erlang virtual machine, really) distribution capabilities. That is, the ability to easily connect nodes (different virtual machines) together to form a cluster.
+
+Here is a conceptual diagram of how everything works:
+
+![](images/primy_1.png)
+
+The distributed system consists of 2 main parts, the _server_ and one or more _workers_. The server's main job is to hand out a number to be tested for primality (when requested by the worker), and to keep track of the highest prime number found. The worker's job is to test if the number is prime, and report back to the server.
+
+### A Worker Node
+
+Each worker node can consist of _one or more_ processes.
+
+![](images/primy_2.png)
+
+In Erlang (and therefore, Elixir), a process created in the Erlang VM is _not_ the same as a process created by the operating system. They are much more lightweight, and only take mere microseconds to [create](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf). In fact, the Erlang VM can support up to 13.4 billion(!) processes.
+
+So here's a revised diagram:
+
+![](images/primy_3.png)
+
+This shows a cluster of worker nodes connected to the server. More importantly, each of this worker nodes consists of multiple processes, each of which _independently_ requests for a number to test from the server, checks for primality, and replies the server.
+
+
+### The Conversation Between the Worker and Server
+
+We now take a closer look at the conversation that is going on between the worker and server.
+
+Let's pick any process. This process begins by sending a message to the server. When the server receives a message from the worker, it will then reply with a number to test. Now, the worker will eventually receive the reply from the server. Once that happens, it can go on and check the number for primality. Once that is completed, it sends the reply to the server. Subsequently, the worker can request or another number, and the cycle repeats.
+
+It is important to realize that this conversation is asynchronous. At no point does the server have to wait for the worker's reply.
+
+![](images/primy_4.png)
+
+## Implementation
+
+Create a new folder, and call it `primy`. Then, create 2 files, calling them `server.ex` and `worker.ex`.
+
+### `server.ex`
+
+Here's the server implementation:
+
+```elixir
+defmodule Server do
+
+  def start do
+    pid  = spawn(__MODULE__, :loop, [1, 1])
+    :yes = :global.register_name("server", pid)
+    pid
+  end
+
+  def loop(number, highest_prime) do
+    receive do
+      {:request, worker_pid} ->
+        send(worker_pid, number)
+        loop(number+1, highest_prime)
+
+      {true, candidate_highest_prime} ->
+        if candidate_highest_prime > highest_prime do
+          IO.puts candidate_highest_prime
+          loop(number, candidate_highest_prime)
+        else
+          loop(number, highest_prime)
+        end
+
+      {false, _} ->
+        loop(number, highest_prime)
+        
+    end
+  end
+
+end
+```
+
+This is only slightly more complicated than the previous examples. Let's start from the top. Let's start from the top.
+
+```elixir
+def start do
+  pid  = spawn(__MODULE__, :loop, [1, 1])
+  :yes = :global.register_name("server", pid)
+  pid
+end
+```
+
+As usual, we spawn a process. This time, we pass in 2 arguments into the loop function. The first argument represents the number to begin with, and the second argument is the highest prime calculated so far. 
+
+The second line globally associates `"server"` with the spawned server pid. This means that all connected nodes can use `server` to refer to the server instead of using it's pid.
+
+The server can receive 3 different kinds of messages from the worker:
+
+#### A Request for a Number
+
+```elixir
+receive do
+  {:request, worker_pid} ->
+    send(worker_pid, number)
+    loop(number+1, highest_prime)
+  # ...
+end
+```
+
+A worker can request for a number by sending a message of the form `{:request, worker_pid}`.The server handles this by sending a message back to the `worker_pid` with the number. After that, it increments `number`, and leaves `highest_prime` unchanged.
+
+#### A Prime Number has been found
+
+```elixir
+receive do
+  # ...
+  {true, candidate_highest_prime} ->
+    if candidate_highest_prime > highest_prime do
+      IO.puts candidate_highest_prime
+      loop(number, candidate_highest_prime)
+    else
+      loop(number, highest_prime)
+    end
+  # ...
+end
+```
+
+When a prime number has been found, a worker sends to the server a message that contains a tuple tagged with `true` as the first element, followed by the prime number. The server checks if this is the highest prime number found. If so, it loops, this time leaving `number` unchanged, but replacing `highest_prime` with `candidate_highest_prime`.
+
+##### A Prime Number has not been found
+
+```elixir
+receive do
+  # ...
+  {false, _} ->
+    loop(number, highest_prime)
+end
+```
+If the given number to the worker is not prime, then a tuple containing `false` as the first element and the number is returned. In this case, it doesn't matter what the number is, so `_` is used to ignore the second value. `number` and `highest_prime` is left unchanged.
+
+### `worker.ex`
+
+Here's the full implementation of the worker:
+
+```elixir
+defmodule Worker do
+
+  def start do
+    pid = spawn(__MODULE__, :loop, [])
+    send(server_pid, {:request, pid})
+    pid
+  end
+
+  def server_pid do
+    :global.whereis_name("server")
+  end
+
+  def loop do
+    receive do
+      number -> 
+        if result = is_prime?(number, 5) do
+          IO.puts number
+        end
+        send(server_pid, {result, number})
+        send(server_pid, {:request, self})
+        loop
+    end
+  end
+
+  def is_prime?(_, 0) do
+    true
+  end
+
+  def is_prime?(p, n) do
+    if fermat(p) do
+      is_prime?(p, n-1)
+    else
+      false
+    end
+  end
+
+  def fermat(1), do: true
+
+  def fermat(p) do
+    r = :random.uniform(p-1)
+    t = mpow(r, p-1, p)
+
+    if t == 1 do
+      true
+    else
+      false
+    end
+  end
+
+  def mpow(n, 1, _) do
+    n
+  end
+
+  def mpow(n, k, m) do
+    mpow(rem(k, 2), n, k, m)
+  end
+
+  def mpow(0, m, k, m) do
+    x = mpow(m, div(k, 2), m)
+    rem(x*x, m)
+  end
+
+  def mpow(_, n, k, m) do
+    x = mpow(n, k-1, m)
+    rem(x*n, m)
+  end
+
+end
+```
+
+The bulk of `worker.ex` are functions that help in calculating whether a number is prime or not. This uses [Fermat's primality test](http://en.wikipedia.org/wiki/Fermat_primality_test). 
+
+The important bits are the first 3 functions.
+
+```elixir
+def start do
+  pid = spawn(__MODULE__, :loop, [])
+  send(server_pid, {:request, pid})
+  pid
+end
+```
+
+The `start` function spawns a new worker process. Then, it sends a message to the server to request for a number. Again, notice that the newly spawned `pid` is passed in as part of the message. The return value of the `start` function is the `pid` of the spawned worker.
+
+
+```elixir
+def server_pid do
+  :global.whereis_name("server")
+end
+```
+
+This is a convenience function to return the pid of the server, which as you might recall, is globally registered with the name `server`.
+
+```elixir
+def loop do
+  receive do
+    number -> 
+      if result = is_prime?(number, 5) do
+        IO.puts number
+      end
+      send(server_pid, {result, number})
+      send(server_pid, {:request, self})
+      loop
+  end
+end
+```
+
+Workers only receive one kind of message from the server – a number. When a number is received, the worker checks if the number is prime. If so, it prints it out to standard output. Then, it sends 2 messages to the server. First, is the result, either `{true, number}` or `{false, number}`. Once it reports the result to the server, it sends another message to the server to request for the next number to process. Finally, it loops itself again.
+
+### Setting Up the Cluster
+
+For this to work, we need to have 3 consoles opened. Quit any existing Elixir sessions you have. Remember to navigate to the `workspace/primy` directory in each of them.
+
+In console 1:
+
+We start `server.ex` with the `--sname` (short name) flag and giving it a name `server`. This name is needed to uniquely identify the node in the cluster.
+
+```
+action@elixir-demo-115908:~/workspace/primy$ iex --sname server server.ex
+iex(server@elixir-demo-115908)1>
+```
+
+In console 2:
+
+```
+action@elixir-demo-115908:~/workspace/primy$ iex --sname w1 worker.ex
+iex(w1@elixir-demo-115908)1>
+```
+
+In console 3:
+
+```
+action@elixir-demo-115908:~/workspace/primy$ iex --sname w2 worker.ex
+iex(w2@elixir-demo-115908)1
+```
+
+You would notice that now your `iex` prompt consists of the server name along with the host name. The next thing now is to link up the nodes together. I will do this in console 1, although you could try this in any console. First, note what are the node name and host names. Therefore, in order to connect to both the `w1` and `w2` worker nodes:
+
+```
+iex(server@elixir-demo-115908)1> Node.connect :'w1@elixir-demo-115908'
+true
+iex(server@elixir-demo-115908)2> Node.connect :'w2@elixir-demo-115908'
+true
+```
+
+If you get `false`, most probably there's a typo. Now on _each_ of the consoles, try this:
+
+```
+iex> Node.list
+```
+
+In console 2 for example, you will see:
+
+```
+iex(w1@elixir-demo-115908)1> Node.list                                                                           
+[:"server@elixir-demo-115908", :"w2@elixir-demo-115908"] 
+```
+
+On the other hand, in console 3, you will see:
+
+```
+iex(w2@elixir-demo-115908)1> Node.list
+[:"server@elixir-demo-115908", :"w1@elixir-demo-115908"]
+```
+
+Just like that, we have a cluster!
+
+### Running Primy
+
+In console 1, start the server:
+
+```
+iex(server@elixir-demo-115908)3> Server.start
+#PID<0.64.0>
+```
+
+At this point, the server is simply waiting in a loop for worker requests.
+
+In console 2, let's start a worker:
+
+```
+iex(w1@elixir-demo-115908)> Worker.start
+```
+
+You will now see a stream of prime numbers. You can also see these numbers appearing in console 1.
+
+Switch to console 3. Let's start a worker there:
+
+```
+iex(w2@elixir-demo-115908)> Worker.start
+```
+
+You should also see a stream of prime numbers. You can make sure that each worker processes a different prime number. Also, you can sometimes notice that the numbers printed in console 1 need not come in increasing order.
+
+Now, have a little more fun and create more workers on each node. You can even repeat the above process and add more nodes.
+
+## Thanks for Reading!
+
+If you had made it this far, give yourself a pat on the back. With Nitrous.IO, we have set up an Elixir development environment in less than 5 minutes. To make matters more awesome, creating a distributed program in Elixir was painless too. As a first time user of Nitrous.IO, I must say I am extremely impressed.
+
+## Want To Learn More?
+
+![](images/exotpbook.png)
+
+I hope you had some fun learning a bit about Elixir, and also diving straight into building a simple distributed system. If you want to learn more, __you should definitely check out my latest book__ (to be released around July 2014), [__The Little Elixir and OTP Guidebook__](http://www.exotpbook.com), where I show you how to build programs using Elixir and OTP. (__Hint__: _Launch Day Discounts!_)
+
+OTP is a battle-tested framework (the source of Erlang’s greatness) that enables you to build fault-tolerant and scalable applications. 
+
+Some of example projects you will get to build are: A parallel task distributor, a complete Tic-Tac-Toe Game and a distributed, fault-tolerant cache. If you have been meaning to do something useful with functional programming or simply itching for a fun weekend side-project, then this book might be just for you. 
+
+Come rediscover the joy of programming and what it feels like to be a beginner again!
+
+## About the Author
+
+Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao).
+
+### Credits
+
+The inspiration for Primy comes from Johan Montelius' [course](http://web.it.kth.se/~johanmon/dse.html) on Distributed Systems in Erlang.
