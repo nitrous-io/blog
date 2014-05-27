@@ -2,11 +2,11 @@
 layout: post
 title: Getting Started with Elixir and Nitrous.IO
 author: benjamin
-utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=into_to_elixir
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=intro_to_elixir
 category: tutorials
 ---
 
-When you combine a magical potion with a compound that gives engines an additional boost, you know the result is going to be nothing short of awesome. In this article, I will introduce [Elixir](http://elixir-lang.org/). Instead of going through the basics (read: the boring stuff), we will learn how to implement a _distributed_ system that will find large primes – all within Nitrous.IO.
+When you combine a magical potion with a compound that gives engines an additional boost, the result is going to be nothing short of awesome. In this article, I will introduce [Elixir](http://elixir-lang.org/). Instead of going through the basics (read: the boring stuff), we will learn how to implement a _distributed_ system that finds large primes.
 
 ## What is Elixir?
 
@@ -20,11 +20,11 @@ Before we get ahead of ourselves, here is how Elixir describes itself:
 
 Setting up a development environment can be a huge pain, or at the very least, a time consuming affair. Nitrous.IO takes away a lot of this pain.
 
-Assuming that you have already logged in, the next step would be to create a new box: 
+Once you're logged in to Nitrous.IO, create a new box:
 
 ![](images/new_box.png)
 
-Then, fill out a _name_ (i.e.: `elixir-demo`), select your closest region and then go ahead and press "Create Box". 
+Fill out a _name_ (i.e. `elixir-demo`), select your closest region and click "Create Box".
 
 ![](images/create_box.png)
 
@@ -32,26 +32,26 @@ Notice that there isn't an Elixir template. In fact, you could pick _any_ templa
 
 ### Installing the Elixir Autopart
 
-Once Nitrous.IO has completed provisioning your new box, you will be greeted by a nice IDE/terminal interface:
+Once Nitrous.IO has completed provisioning your new box, you will be greeted by a combination IDE and terminal interface:
 
 ![](images/ide.png)
 
-To install the Elixir autopart, first select `Autoparts` in the top menu, followed by `Manage Packages`. Next, simply search for "elixir" and hit install:
+To install the Elixir autopart, navigate to `Autoparts > Manage Packages` in the IDE menu. Next, search for "elixir" and hit install:
 
 ![](images/autopart.png)
 
-Installation for me took less than 5 minutes. When the install has completed, you will see this:
+Installation took less than 5 minutes for me. Once the install is complete, you will see:
 
 ![](images/autopart_done.png)
 
-You can now go ahead and click done and close the window. We can check if the install went smoothly at the console by checking for the version of Elixir installed:
+Click done to close the window. We can check if the install went smoothly by checking for the version of Elixir installed in the console:
 
 ```
 action@elixir-demo-115908:~$ elixir -v
 Elixir 0.13.1
 ```
 
-Woot! Not too shabby for less than 5 minutes of work.
+Woot! Not too shabby for minimal time investment.
 
 ## _Just Enough_ Elixir
 
@@ -59,17 +59,16 @@ Before we get to the fun bits, let's go through some of the most important Elixi
 
 ### Processes and the Actor Concurrency Model
 
-Erlang (and therefore Elixir) uses the Actor Concurrency Model. This means
-that:
+Erlang (and therefore Elixir) uses the Actor Concurrency Model. This means:
 
 1. Each actor is a process.
 2. Each process performs a specific task.
 3. To tell a process to do something, you need to send it a message. The process can also reply by sending back another message.
-4. The kinds of messages the process can act upon is specific to the process
+4. The kinds of messages a process can act upon is specific to the process
 itself. In other words, messages are pattern matched.
 5. Other than that, processes do not share any information with other processes.
 
-A code example will help here. In the IDE, right-click on `workspace` and select `New File`. Name the file `shouter.ex`. Then fill in the contents of `shouter.ex` with:
+Let's illustrate this with code. In the IDE, right-click on `workspace` and select `New File`. Name the file `shouter.ex`, type or copy-paste the below, and `Save`.
 
 ```elixir
 defmodule Shouter do
@@ -93,16 +92,14 @@ defmodule Shouter do
 end
 ```
 
-Next, hit `Save`, (Don't forget this step!)
-
 Nitrous.IO currently doesn't come with syntax highlighting for Elixir, but I found Ruby to be a pretty close match. 
 
-Now let's try to execute this program. Elixir comes with its own interactive prompt called `iex`. It is the equivalent if `irb` (if you are a Rubyist) or `node` (if you are a hipster).
+Now let's try to execute this program. Elixir comes with its own interactive console called `iex`. It is the equivalent of `irb`, `ipython`, etc.
 
 In the console, navigate to the workspace directory and run the program:
 
 ```
-action@elixir-demo-115908:~$ cd workspace/ 
+action@elixir-demo-115908:~$ cd workspace/
 action@elixir-demo-115908:~/workspace$ iex shouter.ex
 Erlang/OTP 17 [erts-6.0] [source] [64-bit]
 Interactive Elixir (0.13.1) - press Ctrl+C to exit (type h() ENTER for help)                                     
@@ -116,7 +113,9 @@ iex(1)> w1 = Shouter.start
 #PID<0.48.0>  
 ```
 
-Congratulations! You have just created your first Elixir process. The return value is the process id, or _pid_ for short. Unsurprisingly, `w1` also contains the pid to this newly created process. Note that you will most likely have a different pid compared to the examples. Pids serve as a _reference_ to processes. You can think of it like object references in object-oriented programming languages such as Ruby or Java.
+Congratulations! You have just created your first Elixir process. The return value is the process id, or _pid_ for short, and has been assigned to `w1`.
+
+Note that you will most likely have a different pid compared to the examples. Pids serve as a _reference_ to processes. You can think of it like object references in object-oriented programming languages such as Ruby or Java.
 
 Let's take a close look at the `start` function:
 
@@ -131,16 +130,16 @@ defmodule Shouter do
 end
 ```
 
-In Elixir, processes are created using the `spawn` built-in function. It takes in a _module_, which is represented here by `__MODULE__`. This expands to `Shouter` in this example. The second argument is the `function`, followed by the list of arguments to pass to the function. In this case, since `loop` does not take in any arguments, we pass in an empty list. (We will see what `loop` does shortly.) As noted previously, the return value of the `spawn` function is a pid.
+In Elixir, processes are created using the `spawn` built-in function. It takes in a _module_, which is represented here by `__MODULE__`. This expands to `Shouter` in this example. The second argument is the `function`, followed by the list of arguments to pass to the function.  Since `loop` does not take in any arguments, we pass in an empty list. As noted previously, the return value of the `spawn` function is a pid.
 
-Let's go ahead and create another process. 
+Let's go ahead and create another process.
 
 ```
 iex(2)> w2 = Shouter.start
 #PID<0.50.0>  
 ```
 
-Recall that processes communicate with each other by sending messages. Let's do that now. We will send a message _from_ `w1` to `w2`: 
+Recall that processes communicate with each other by sending messages. Let's do that now. We will send a message _from_ `w1` to `w2`:
 
 ```
 iex(3)> Shouter.send_message(w1, w2, "Ohai, NitrousIO!")
@@ -148,7 +147,7 @@ iex(3)> Shouter.send_message(w1, w2, "Ohai, NitrousIO!")
 {#PID<0.50.0>, "OHAI, NITROUSIO!!!!"}  
 ```
 
-You could even send a message to the same process:
+You can even send a message to the same process:
 
 ```
 iex(4)> Shouter.send_message(w1, w1, "I'm so lonely ...") 
@@ -166,13 +165,13 @@ def send_message(to_pid, from_pid, msg) do
 end
 ```
 
-Send message is a thin wrapper for `send`, another built-in function. The first argument of send is the pid of the process you want to send the message to. The second argument, is the process. The message can be a variety of things. It could be a string, a number, another pid, or in this case, a tuple. Tuples are data types which can contain things of potentially different types. In this case, our message is a tuple that contains a pid followed by a message.
+The `send_message` function above is a thin wrapper for `send`, a built-in function. The first argument of `send` is the pid of the process you want to send the message to. The second argument is the process. The message can be a variety of things. It can be a string, a number, another pid, or in this case, a tuple. Tuples are data types which can contain things of potentially different types. Our message is a tuple that contains a pid followed by a message.
 
 So far, we've covered the sending part. Now, let's see how messages are _received_.
 
 #### Receiving Messages
 
-Recall how a process is started. First, we call the `start` function, which then calls the `spawn` function. The `spawn` function executes a function that runs in the newly created process. In our case, this function that runs in the newly created process is `loop`:
+Recall how a process is started. We call the `start` function, which then calls the `spawn` function. The `spawn` function executes a function that runs in the newly created process. In our case, this function that runs in the newly created process is `loop`:
 
 ```elixir
 def loop do
@@ -184,11 +183,11 @@ def loop do
 end
 ```
 
-Incoming messages are processed in a `receive` block. When a message is received, it is _pattern matched_. Pattern matching in this case means that the "shape" of incoming message is compared with the pattern defined within the message block. In `loop`, for example, we will only process messages that are 2 element tuples.
+Incoming messages are processed in a `receive` block. When a message is received, it is _pattern matched_. Pattern matching in this case means that the "shape" of incoming message is compared with the pattern defined within the message block. In `loop`, for example, we only process messages that are 2-element tuples.
 
-Notice that after the process is `receive`-ed, `loop` is recursively called. This is needed because if the recursive call is omitted, then the process will exit since there is nothing left to do, and subsequently be garbage collected.
+Notice that after the process is `receive`-ed, `loop` is recursively called. This is necessary. If the recursive call is omitted, then the process will exit since there is nothing left to do, and subsequently be garbage collected.
 
-In order to facilitate back and forth communication with the sender and receiver, messages must include the pids within the message payload. 
+In order to facilitate back and forth communication between the sender and receiver, messages must include the pids within the message payload. 
 
 To let this sink, create a new file called `echo.ex`:
 
@@ -215,7 +214,7 @@ defmodule Echo do
 end
 ```
 
-It is almost the same as `Shouter`, with the exception that when a message is received, not only a message is printed out, but the sender is replied with another message, `{self, msg}`. `self` is the pid of the current process, i.e. the process which received the initial message.
+This is very similar to `Shouter`.  The difference: when a message is received, in addition to printing out a message, the receiver replies to the sender with another message, `{self, msg}`. `self` is the pid of the current process, i.e. the process which received the initial message.
 
 (To quit from `iex`, press `Ctrl` and `C` twice.)
 
@@ -229,7 +228,7 @@ iex(2)> w2 = Echo.start
 #PID<0.50.0> 
 ```
 
-Can you guess what happens if we were to send a message from `w1` to `w2`?
+Can you guess what happens if we send a message from `w1` to `w2`?
 
 ```
 iex(3)> Echo.send_message(w1, {w2 "To infinity ... and beyond!"})
@@ -268,7 +267,7 @@ Here is a conceptual diagram of how everything works:
 
 ![](images/primy_1.png)
 
-The distributed system consists of 2 main parts, the _server_ and one or more _workers_. The server's main job is to hand out a number to be tested for primality (when requested by the worker), and to keep track of the highest prime number found. The worker's job is to test if the number is prime, and report back to the server.
+The distributed system consists of 2 main parts, the _server_ and one or more _workers_. The server's main job is to hand out a number to be tested for primality (when requested by the worker), and to keep track of the highest prime number found. The worker's job is to test if the number is prime and report back to the server.
 
 ### A Worker Node
 
@@ -276,20 +275,20 @@ Each worker node can consist of _one or more_ processes.
 
 ![](images/primy_2.png)
 
-In Erlang (and therefore, Elixir), a process created in the Erlang VM is _not_ the same as a process created by the operating system. They are much more lightweight, and only take mere microseconds to [create](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf). In fact, the Erlang VM can support up to 13.4 billion(!) processes.
+A process created in the Erlang VM (and therefore Elixir) is _not_ the same as a process created by the operating system. Erlang VM processes are much more lightweight, and only take microseconds to [create](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf). In fact, the Erlang VM can support up to 13.4 billion(!) processes.
 
 So here's a revised diagram:
 
 ![](images/primy_3.png)
 
-This shows a cluster of worker nodes connected to the server. More importantly, each of this worker nodes consists of multiple processes, each of which _independently_ requests for a number to test from the server, checks for primality, and replies the server.
+This shows a cluster of worker nodes connected to the server. More importantly, each of these worker nodes consist of multiple processes, each of which _independently_ requests for a number to test from the server, checks for primality, and replies the server.
 
 
 ### The Conversation Between the Worker and Server
 
 We now take a closer look at the conversation that is going on between the worker and server.
 
-Let's pick any process. This process begins by sending a message to the server. When the server receives a message from the worker, it will then reply with a number to test. Now, the worker will eventually receive the reply from the server. Once that happens, it can go on and check the number for primality. Once that is completed, it sends the reply to the server. Subsequently, the worker can request or another number, and the cycle repeats.
+Let's pick any process. This process begins by sending a message to the server. When the server receives a message from the worker, it will then reply with a number to test. Once the worker receives a reply, it can check the number for primality, and send the result to the server. Subsequently, the worker can request another number, and the cycle repeats.
 
 It is important to realize that this conversation is asynchronous. At no point does the server have to wait for the worker's reply.
 
@@ -335,7 +334,7 @@ defmodule Server do
 end
 ```
 
-This is only slightly more complicated than the previous examples. Let's start from the top. Let's start from the top.
+This is only slightly more complicated than the previous examples. Let's start from the top.
 
 ```elixir
 def start do
@@ -345,9 +344,9 @@ def start do
 end
 ```
 
-As usual, we spawn a process. This time, we pass in 2 arguments into the loop function. The first argument represents the number to begin with, and the second argument is the highest prime calculated so far. 
+As usual, we spawn a process. This time, we pass 2 arguments into the loop function. The first argument represents the number to begin with, and the second argument is the highest prime calculated so far. 
 
-The second line globally associates `"server"` with the spawned server pid. This means that all connected nodes can use `server` to refer to the server instead of using it's pid.
+The second line globally associates `"server"` with the spawned server pid. This means that all connected nodes can use `server` to refer to the server instead of using its pid.
 
 The server can receive 3 different kinds of messages from the worker:
 
@@ -362,7 +361,7 @@ receive do
 end
 ```
 
-A worker can request for a number by sending a message of the form `{:request, worker_pid}`.The server handles this by sending a message back to the `worker_pid` with the number. After that, it increments `number`, and leaves `highest_prime` unchanged.
+A worker can request a number by sending a message of the form `{:request, worker_pid}`. The server handles this by sending a message back to the `worker_pid` with the number. After that, it increments `number`, and leaves `highest_prime` unchanged.
 
 #### A Prime Number has been found
 
@@ -391,7 +390,8 @@ receive do
     loop(number, highest_prime)
 end
 ```
-If the given number to the worker is not prime, then a tuple containing `false` as the first element and the number is returned. In this case, it doesn't matter what the number is, so `_` is used to ignore the second value. `number` and `highest_prime` is left unchanged.
+
+If the given number to the worker is not prime, then a tuple containing `false` as the first element and the number is returned. In this case, it doesn't matter what the number is, so `_` is used to ignore the second value. `number` and `highest_prime` are left unchanged.
 
 ### `worker.ex`
 
@@ -468,7 +468,7 @@ defmodule Worker do
 end
 ```
 
-The bulk of `worker.ex` are functions that help in calculating whether a number is prime or not. This uses [Fermat's primality test](http://en.wikipedia.org/wiki/Fermat_primality_test). 
+The bulk of `worker.ex` is functions that help calculate whether a number is prime. [Fermat's primality test](http://en.wikipedia.org/wiki/Fermat_primality_test) is used.
 
 The important bits are the first 3 functions.
 
@@ -480,7 +480,7 @@ def start do
 end
 ```
 
-The `start` function spawns a new worker process. Then, it sends a message to the server to request for a number. Again, notice that the newly spawned `pid` is passed in as part of the message. The return value of the `start` function is the `pid` of the spawned worker.
+The `start` function spawns a new worker process. It then sends a message to the server to request a number. Again, notice that the newly spawned `pid` is passed in as part of the message. The return value of the `start` function is the `pid` of the spawned worker.
 
 
 ```elixir
@@ -509,11 +509,11 @@ Workers only receive one kind of message from the server – a number. When a nu
 
 ### Setting Up the Cluster
 
-For this to work, we need to have 3 consoles opened. Quit any existing Elixir sessions you have. Remember to navigate to the `workspace/primy` directory in each of them.
+Quit any existing Elixir sessions you have, then open 3 consoles. Remember to navigate to the `workspace/primy` directory in each of them.
 
 In console 1:
 
-We start `server.ex` with the `--sname` (short name) flag and giving it a name `server`. This name is needed to uniquely identify the node in the cluster.
+We start `server.ex` with the `--sname` (short name) flag and give it a name `server`. This name is needed to uniquely identify the node in the cluster.
 
 ```
 action@elixir-demo-115908:~/workspace/primy$ iex --sname server server.ex
@@ -534,7 +534,7 @@ action@elixir-demo-115908:~/workspace/primy$ iex --sname w2 worker.ex
 iex(w2@elixir-demo-115908)1
 ```
 
-You would notice that now your `iex` prompt consists of the server name along with the host name. The next thing now is to link up the nodes together. I will do this in console 1, although you could try this in any console. First, note what are the node name and host names. Therefore, in order to connect to both the `w1` and `w2` worker nodes:
+Notice that now your `iex` prompt consists of the server name along with the host name. The next thing now is to link up the nodes together. I will do this in console 1, although you could try this in any console. First, note what are the node name and host names. Therefore, in order to connect to both the `w1` and `w2` worker nodes:
 
 ```
 iex(server@elixir-demo-115908)1> Node.connect :'w1@elixir-demo-115908'
@@ -590,9 +590,9 @@ Switch to console 3. Let's start a worker there:
 iex(w2@elixir-demo-115908)> Worker.start
 ```
 
-You should also see a stream of prime numbers. You can make sure that each worker processes a different prime number. Also, you can sometimes notice that the numbers printed in console 1 need not come in increasing order.
+You should also see a stream of prime numbers. Two things to note: each worker is processing a different prime number, and the numbers printed in console 1 need not come in increasing order.
 
-Now, have a little more fun and create more workers on each node. You can even repeat the above process and add more nodes.
+Now, have a little fun and create more workers on each node. You can even repeat the above process and add more nodes.
 
 ## Thanks for Reading!
 
@@ -602,7 +602,7 @@ If you had made it this far, give yourself a pat on the back. With Nitrous.IO, w
 
 ![](images/exotpbook.png)
 
-I hope you had some fun learning a bit about Elixir, and also diving straight into building a simple distributed system. If you want to learn more, __you should definitely check out my latest book__ (to be released around July 2014), [__The Little Elixir and OTP Guidebook__](http://www.exotpbook.com), where I show you how to build programs using Elixir and OTP. (__Hint__: _Launch Day Discounts!_)
+I hope you had some fun learning about Elixir and diving straight into building a simple distributed system. If you want to learn more, __you should definitely check out my latest book__ (to be released around July 2014), [__The Little Elixir and OTP Guidebook__](http://www.exotpbook.com), where I show you how to build programs using Elixir and OTP. (__Hint__: _Launch Day Discounts!_)
 
 OTP is a battle-tested framework (the source of Erlang’s greatness) that enables you to build fault-tolerant and scalable applications. 
 
@@ -612,7 +612,7 @@ Come rediscover the joy of programming and what it feels like to be a beginner a
 
 ## About the Author
 
-Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao).
+Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, he is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao).
 
 ### Credits
 
