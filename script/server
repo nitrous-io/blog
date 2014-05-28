@@ -5,4 +5,4 @@ then
   exit 1
 fi
 
-bundle exec jekyll serve --watch --port $1
+bundle exec jekyll serve --watch --drafts --port $1
