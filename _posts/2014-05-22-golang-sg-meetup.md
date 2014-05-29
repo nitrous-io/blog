@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Singapore's First Golang Meetup: Recap and Slides"
-author: Tim
+author: tim
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=golang_sg
 category: announcements
 highlight_image: /images/sg-gopher.jpg
