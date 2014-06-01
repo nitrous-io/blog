@@ -16,9 +16,17 @@ Before we get ahead of ourselves, here is how Elixir describes itself:
 
 > Elixir is a functional, meta-programming aware language built on top of the Erlang VM. It is a dynamic language that focuses on tooling to leverage Erlang's abilities to build concurrent, distributed and fault-tolerant applications with hot code upgrades.
 
-## Getting Elixir on Nitrous.IO
+## Getting Elixir installed
 
-Setting up a development environment can be a huge pain, or at the very least, a time consuming affair. Nitrous.IO takes away a lot of this pain.
+You can either spend a couple minutes setting up Elixir on
+[Nitrous.IO](https://www.nitrous.io), or install Erlang and Elixir on your
+local machine with [these
+instructions](http://elixir-lang.org/getting_started/1.html).
+
+If you choose the latter, [skip ahead](#just-enough-elixir) to the next section
+when you're done.
+
+## Elixir on Nitrous.IO
 
 Once you're logged in to Nitrous.IO, create a new box:
 
@@ -52,6 +60,8 @@ Elixir 0.13.1
 ```
 
 Woot! Not too shabby for minimal time investment.
+
+<a name="just-enough-elixir"></a>
 
 ## _Just Enough_ Elixir
 
