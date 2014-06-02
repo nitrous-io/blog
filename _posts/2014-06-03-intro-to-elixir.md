@@ -7,6 +7,9 @@ category: tutorials
 description: Building a distributed system in Elixir and cloud IDE Nitrous.IO
 ---
 
+_Preface_: Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, he is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao). In this guest post, Benjamin talks about Elixir and how to get started with Elixir on Nitrous.IO.
+
+
 When you combine a magical potion with a compound that gives engines an additional boost, the result is going to be nothing short of awesome. In this article, I will introduce [Elixir](http://elixir-lang.org/). Instead of going through the basics (read: the boring stuff), we will learn how to implement a _distributed_ system that finds large primes.
 
 ## What is Elixir?
@@ -628,10 +631,6 @@ OTP is a battle-tested framework (the source of Erlang’s greatness) that enabl
 Some of the example projects you will build: a parallel task distributor, a complete Tic-Tac-Toe Game and a distributed, fault-tolerant cache. If you have been meaning to do something useful with functional programming or simply itching for a fun weekend side-project, then this book might just be for you.
 
 Come rediscover the joy of programming and what it feels like to be a beginner again!
-
-## About the Author
-
-Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, he is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao).
 
 ### Credits
 
