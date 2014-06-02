@@ -16,6 +16,10 @@ Here is how Elixir describes itself:
 
 > Elixir is a functional, meta-programming aware language built on top of the Erlang VM. It is a dynamic language that focuses on tooling to leverage Erlang's abilities to build concurrent, distributed and fault-tolerant applications with hot code upgrades.
 
+Elixir also comes with a [strong endorsement](http://joearms.github.io/2013/05/31/a-week-with-elixir.html) from none other than Joe Armstrong (creator of Erlang) himself:
+
+> Elixir has a non-scary syntax and combines the good features of Ruby and Erlang. It’s not Erlang and it’s not Ruby and it has ideas of its own.
+
 ## Getting Elixir installed
 
 You can either spend a couple minutes setting up Elixir on
@@ -604,7 +608,11 @@ Now, have a little fun and create more workers on each node. You can even repeat
 
 ## Thanks for Reading!
 
-If you had made it this far, give yourself a pat on the back. With Nitrous.IO, we have set up an Elixir development environment in less than 5 minutes. To make matters more awesome, creating a distributed program in Elixir was painless too. As a first time user of Nitrous.IO, I must say I am extremely impressed.
+If you had made it this far, give yourself a pat on the back.
+
+Hopefully you spent very little time setting up your Elixir development environment with Nitrous.IO and were able to focus on learning about distributed systems!  When I first used Nitrous.IO, I was extremely impressed with the time I was able to save.
+
+Computing prime numbers may be trivial, but the goal here was to illustrate the _structure_ of a distributed system in Elixir.  Consider some of the problems you have solved in the past, and think about how they can be modelled with the Actor Concurrency Model and message passing.
 
 ## Want To Learn More?
 
