@@ -4,6 +4,7 @@ title: Getting Started with Elixir and Nitrous.IO
 author: benjamin
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=intro_to_elixir
 category: tutorials
+description: Building a distributed system in Elixir and cloud IDE Nitrous.IO
 ---
 
 When you combine a magical potion with a compound that gives engines an additional boost, the result is going to be nothing short of awesome. In this article, I will introduce [Elixir](http://elixir-lang.org/). Instead of going through the basics (read: the boring stuff), we will learn how to implement a _distributed_ system that finds large primes.
@@ -19,6 +20,8 @@ Here is how Elixir describes itself:
 Elixir also comes with a [strong endorsement](http://joearms.github.io/2013/05/31/a-week-with-elixir.html) from none other than Joe Armstrong (creator of Erlang) himself:
 
 > Elixir has a non-scary syntax and combines the good features of Ruby and Erlang. It’s not Erlang and it’s not Ruby and it has ideas of its own.
+
+<!--break-->
 
 ## Getting Elixir installed
 
