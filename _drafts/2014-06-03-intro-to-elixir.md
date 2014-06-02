@@ -13,7 +13,7 @@ When you combine a magical potion with a compound that gives engines an addition
 
 Here is how Elixir describes itself:
 
-![](images/elixir-logo.png)
+![](/images/elixir-logo.png)
 
 > Elixir is a functional, meta-programming aware language built on top of the Erlang VM. It is a dynamic language that focuses on tooling to leverage Erlang's abilities to build concurrent, distributed and fault-tolerant applications with hot code upgrades.
 
@@ -37,11 +37,11 @@ when you're done.
 
 Once you're logged in to Nitrous.IO, create a new box:
 
-![](images/new_box.png)
+![](/images/new_box.png)
 
 Fill out a _name_ (i.e. `elixir-demo`), select your closest region and click "Create Box".
 
-![](images/create_box.png)
+![](/images/create_box.png)
 
 Notice that there isn't an Elixir template. In fact, you could pick _any_ template you want, because of a very nifty Nitrous.IO feature – [Autoparts](http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html).
 
@@ -49,15 +49,15 @@ Notice that there isn't an Elixir template. In fact, you could pick _any_ templa
 
 Once Nitrous.IO has completed provisioning your new box you will be greeted by a combination IDE and terminal interface:
 
-![](images/ide.png)
+![](/images/ide.png)
 
 To install the Elixir autopart, navigate to `Autoparts > Manage Packages` in the IDE menu. Next, search for "elixir" and hit install:
 
-![](images/autopart.png)
+![](/images/autopart.png)
 
 Installation took less than 5 minutes for me. Once the install is complete, you will see:
 
-![](images/autopart_done.png)
+![](/images/autopart_done.png)
 
 Click done to close the window. We can check if the install went smoothly by checking for the version of Elixir installed in the console:
 
@@ -280,7 +280,7 @@ We will build a _distributed_ system that check for prime numbers. In order to d
 
 Here is a conceptual diagram of how everything works:
 
-![](images/primy_1.png)
+![](/images/primy_1.png)
 
 The distributed system consists of 2 main parts, the _server_ and one or more _workers_. The server's main job is to hand out a number to be tested for primality (when requested by the worker), and to keep track of the highest prime number found. The worker's job is to test if the number is prime and report back to the server.
 
@@ -288,13 +288,13 @@ The distributed system consists of 2 main parts, the _server_ and one or more _w
 
 Each worker node can consist of _one or more_ processes.
 
-![](images/primy_2.png)
+![](/images/primy_2.png)
 
 A process created in the Erlang VM (and therefore Elixir) is _not_ the same as a process created by the operating system. Erlang VM processes are much more lightweight, and only take microseconds to [create](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf). In fact, the Erlang VM can support up to 13.4 billion(!) processes.
 
 So here's a revised diagram:
 
-![](images/primy_3.png)
+![](/images/primy_3.png)
 
 This shows a cluster of worker nodes connected to the server. More importantly, each of these worker nodes consist of multiple processes, each of which _independently_ requests for a number to test from the server, checks for primality, and replies the server.
 
@@ -307,7 +307,7 @@ Let's pick any process. This process begins by sending a message to the server. 
 
 It is important to realize that this conversation is asynchronous. At no point does the server have to wait for the worker's reply.
 
-![](images/primy_4.png)
+![](/images/primy_4.png)
 
 ## Implementation
 
@@ -619,7 +619,7 @@ Computing prime numbers may be trivial, but the goal here was to illustrate the 
 
 ## Want To Learn More?
 
-![](images/exotpbook.png)
+![](/images/exotpbook.png)
 
 I hope you had some fun learning about Elixir and diving straight into building a simple distributed system. If you want to learn more, __you should definitely check out my latest book__ (to be released around July 2014), [__The Little Elixir and OTP Guidebook__](http://www.exotpbook.com), where I show you how to build programs using Elixir and OTP. (__Hint__: _Launch Day Discounts!_)
 
