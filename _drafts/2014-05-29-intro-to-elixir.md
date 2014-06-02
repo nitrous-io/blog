@@ -10,7 +10,7 @@ When you combine a magical potion with a compound that gives engines an addition
 
 ## What is Elixir?
 
-Before we get ahead of ourselves, here is how Elixir describes itself:
+Here is how Elixir describes itself:
 
 ![](images/elixir-logo.png)
 
@@ -40,7 +40,7 @@ Notice that there isn't an Elixir template. In fact, you could pick _any_ templa
 
 ### Installing the Elixir Autopart
 
-Once Nitrous.IO has completed provisioning your new box, you will be greeted by a combination IDE and terminal interface:
+Once Nitrous.IO has completed provisioning your new box you will be greeted by a combination IDE and terminal interface:
 
 ![](images/ide.png)
 
@@ -65,7 +65,7 @@ Woot! Not too shabby for minimal time investment.
 
 ## _Just Enough_ Elixir
 
-Before we get to the fun bits, let's go through some of the most important Elixir concepts that will let you understand the code a bit better later on. 
+Before we get to the fun bits, let's go through some important Elixir concepts to help you understand the code better later on.
 
 ### Processes and the Actor Concurrency Model
 
@@ -116,7 +116,7 @@ Interactive Elixir (0.13.1) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)>       
 ```
 
-Let's see how this program works. Let's create a `Shouter` process:
+Let's see how this program works. Create a `Shouter` process:
 
 ```
 iex(1)> w1 = Shouter.start
@@ -142,7 +142,7 @@ end
 
 In Elixir, processes are created using the `spawn` built-in function. It takes in a _module_, which is represented here by `__MODULE__`. This expands to `Shouter` in this example. The second argument is the `function`, followed by the list of arguments to pass to the function.  Since `loop` does not take in any arguments, we pass in an empty list. As noted previously, the return value of the `spawn` function is a pid.
 
-Let's go ahead and create another process.
+Let's create another process.
 
 ```
 iex(2)> w2 = Shouter.start
@@ -175,13 +175,13 @@ def send_message(to_pid, from_pid, msg) do
 end
 ```
 
-The `send_message` function above is a thin wrapper for `send`, a built-in function. The first argument of `send` is the pid of the process you want to send the message to. The second argument is the process. The message can be a variety of things. It can be a string, a number, another pid, or in this case, a tuple. Tuples are data types which can contain things of potentially different types. Our message is a tuple that contains a pid followed by a message.
+The `send_message` function above is a thin wrapper for `send`, a built-in function. The first argument of `send` is the pid of the process you want to send the message to. The second argument is the process. The message can be a variety of things. It can be a string, a number, another pid, or in this case, a tuple. Tuples are data types which can contain things of potentially different types. Our message is the tuple `{pid, message}`.
 
 So far, we've covered the sending part. Now, let's see how messages are _received_.
 
 #### Receiving Messages
 
-Recall how a process is started. We call the `start` function, which then calls the `spawn` function. The `spawn` function executes a function that runs in the newly created process. In our case, this function that runs in the newly created process is `loop`:
+Recall how a process is started. We call the `start` function, which then calls the `spawn` function. The `spawn` function executes a function that runs in the newly created process. In this case, this function that runs in the newly created process is `loop`:
 
 ```elixir
 def loop do
@@ -193,13 +193,13 @@ def loop do
 end
 ```
 
-Incoming messages are processed in a `receive` block. When a message is received, it is _pattern matched_. Pattern matching in this case means that the "shape" of incoming message is compared with the pattern defined within the message block. In `loop`, for example, we only process messages that are 2-element tuples.
+Incoming messages are processed in a `receive` block. When a message is received, it is _pattern matched_. Pattern matching means that the "shape" of incoming message is compared with the pattern defined within the message block. In `loop`, for example, we only process messages that are 2-element tuples.
 
-Notice that after the process is `receive`-ed, `loop` is recursively called. This is necessary. If the recursive call is omitted, then the process will exit since there is nothing left to do, and subsequently be garbage collected.
+Notice that after the process is `receive`-ed, `loop` is recursively called. This is necessary. If the recursive call is omitted, then the process will exit since there is nothing left to do and subsequently be garbage collected.
 
-In order to facilitate back and forth communication between the sender and receiver, messages must include the pids within the message payload. 
+Messages must include the pids within the message payload in order to facilitate back and forth communication between the sender and receiver,
 
-To let this sink, create a new file called `echo.ex`:
+We'll demonstrate this with an `Echo` module.  Create a new file called `echo.ex`:
 
 ```elixir
 defmodule Echo do
@@ -225,8 +225,6 @@ end
 ```
 
 This is very similar to `Shouter`.  The difference: when a message is received, in addition to printing out a message, the receiver replies to the sender with another message, `{self, msg}`. `self` is the pid of the current process, i.e. the process which received the initial message.
-
-(To quit from `iex`, press `Ctrl` and `C` twice.)
 
 Let's run `echo.ex`:
 
@@ -306,7 +304,7 @@ It is important to realize that this conversation is asynchronous. At no point d
 
 ## Implementation
 
-Create a new folder, and call it `primy`. Then, create 2 files, calling them `server.ex` and `worker.ex`.
+Create a new folder `primy`. Then, create 2 files, calling them `server.ex` and `worker.ex`.
 
 ### `server.ex`
 
@@ -344,7 +342,7 @@ defmodule Server do
 end
 ```
 
-This is only slightly more complicated than the previous examples. Let's start from the top.
+This is slightly more complicated than the previous examples. Let's start from the top.
 
 ```elixir
 def start do
@@ -354,13 +352,13 @@ def start do
 end
 ```
 
-As usual, we spawn a process. This time, we pass 2 arguments into the loop function. The first argument represents the number to begin with, and the second argument is the highest prime calculated so far. 
+As usual, we spawn a process. This time, we pass 2 arguments into the loop function: the number to begin with, and the highest prime calculated so far.
 
 The second line globally associates `"server"` with the spawned server pid. This means that all connected nodes can use `server` to refer to the server instead of using its pid.
 
 The server can receive 3 different kinds of messages from the worker:
 
-#### A Request for a Number
+#### 1. A Request for a Number
 
 ```elixir
 receive do
@@ -373,7 +371,7 @@ end
 
 A worker can request a number by sending a message of the form `{:request, worker_pid}`. The server handles this by sending a message back to the `worker_pid` with the number. After that, it increments `number`, and leaves `highest_prime` unchanged.
 
-#### A Prime Number has been found
+#### 2. A Prime Number has been found
 
 ```elixir
 receive do
@@ -389,9 +387,9 @@ receive do
 end
 ```
 
-When a prime number has been found, a worker sends to the server a message that contains a tuple tagged with `true` as the first element, followed by the prime number. The server checks if this is the highest prime number found. If so, it loops, this time leaving `number` unchanged, but replacing `highest_prime` with `candidate_highest_prime`.
+When a prime number has been found, a worker sends to the server the message that contains a tuple `{true, number}`. The server checks if this is the highest prime number found. If so, it loops, this time leaving `number` unchanged, but replacing `highest_prime` with `candidate_highest_prime`.
 
-##### A Prime Number has not been found
+##### 3. A Prime Number has not been found
 
 ```elixir
 receive do
@@ -401,7 +399,7 @@ receive do
 end
 ```
 
-If the given number to the worker is not prime, then a tuple containing `false` as the first element and the number is returned. In this case, it doesn't matter what the number is, so `_` is used to ignore the second value. `number` and `highest_prime` are left unchanged.
+If the given number to the worker is not prime, then the tuple `{false, number}` is returned. In this case, it doesn't matter what the number is, so `_` is used to ignore the second value. `number` and `highest_prime` are left unchanged.
 
 ### `worker.ex`
 
@@ -594,7 +592,7 @@ iex(w1@elixir-demo-115908)> Worker.start
 
 You will now see a stream of prime numbers. You can also see these numbers appearing in console 1.
 
-Switch to console 3. Let's start a worker there:
+Switch to console 3 and start a worker:
 
 ```
 iex(w2@elixir-demo-115908)> Worker.start
@@ -616,7 +614,7 @@ I hope you had some fun learning about Elixir and diving straight into building 
 
 OTP is a battle-tested framework (the source of Erlang’s greatness) that enables you to build fault-tolerant and scalable applications. 
 
-Some of example projects you will get to build are: A parallel task distributor, a complete Tic-Tac-Toe Game and a distributed, fault-tolerant cache. If you have been meaning to do something useful with functional programming or simply itching for a fun weekend side-project, then this book might be just for you. 
+Some of the example projects you will build: a parallel task distributor, a complete Tic-Tac-Toe Game and a distributed, fault-tolerant cache. If you have been meaning to do something useful with functional programming or simply itching for a fun weekend side-project, then this book might just be for you.
 
 Come rediscover the joy of programming and what it feels like to be a beginner again!
 
