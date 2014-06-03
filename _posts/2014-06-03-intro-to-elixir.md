@@ -632,7 +632,7 @@ Come rediscover the joy of programming and what it feels like to be a beginner a
 
 ### About the Author
 
-Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, he is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao). In this guest post, Benjamin talks about Elixir and how to get started with Elixir on Nitrous.IO.
+Benjamin Tan is the Technical Director at Qisahn.com Pte Ltd, a video game retailer based in Singapore. Deathly afraid of being irrelevant, he is always trying to catch up on his ever-growing reading list. He [blogs](http://benjamintanweihao.github.io/), [codes](https://github.com/benjamintanweihao) and [tweets](https://twitter.com/bentanweihao).
 
 ### Credits
 
