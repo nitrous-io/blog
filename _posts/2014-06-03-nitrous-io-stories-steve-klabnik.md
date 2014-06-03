@@ -18,7 +18,7 @@ transitioned to writing more words for humans instead. Sometimes, the
 words for humans are even about computers!
 
 When I'm writing code, it's quite often Ruby, as I maintain a lot of
-gems, and work on Rails. But it's increasingly been more Rust lately
+gems and work on Rails. But it's increasingly been more Rust lately
 instead, and I'm pretty psyched about that.
 
 I also like to read books. Mostly by those French philosophers that
@@ -31,7 +31,7 @@ worry.
 
 I have two computers, and would like to acquire a third.
 
-The first is a Chromebook Pixel I don't even have Crouton on it. I
+The first is a Chromebook Pixel. I don't even have Crouton on it. I
 like the Pixel because I'm interested in having the web browser
 eventually merge with the operating system, and ChromeOS is the
 closest we have to that yet. So I'm dogfooding.
