@@ -186,10 +186,23 @@ h1.post-title a:hover {
   text-decoration: none;
 }
 
+.post a, a:visited, a:active {
+  text-decoration: underline;
+}
+
+.post a:hover {
+  color: #333;
+}
+
+.post h1.post-title a {
+  text-decoration: none;
+}
+
 a.btn.read-more {
   display: block;
   margin: 12px 0;
   background-color: #fcfcfc;
+  text-decoration: none;
 }
 
 .pnav {
