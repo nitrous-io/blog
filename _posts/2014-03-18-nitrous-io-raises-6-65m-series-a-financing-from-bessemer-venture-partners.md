@@ -18,7 +18,6 @@ Why development environments?  In the past few years, most of the software we us
 The initial response from the development community has been astounding.  Nitrous.IO has grown to over 100,000 registered developers from over 4,000 engineering organizations in just seven months since launching our public beta through word-of-mouth alone -- without a dollar spent on marketing!
 
 <blockquote class="twitter-tweet" lang="en"><p>Still using the ChromeBook Pixel, still loving <a href="https://twitter.com/NitrousIO">@nitrousio</a> (formerly <a href="https://twitter.com/ActionIO">@actionio</a>). I love the web!</p>&mdash; Yehuda Katz (@wycats) <a href="https://twitter.com/wycats/statuses/325383823636439043">April 19, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" lang="en"><p>For <a href="https://twitter.com/skylightio">@skylightio</a>, we use Java, Rails, Postgres, Cassandra &amp; Ember. Pretty cool to be able to hack on that stack in a browser with <a href="https://twitter.com/NitrousIO">@NitrousIO</a>.</p>&mdash; Tom Dale (@tomdale) <a href="https://twitter.com/tomdale/statuses/362707886868152320">July 31, 2013</a></blockquote>
 

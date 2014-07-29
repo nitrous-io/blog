@@ -5,7 +5,7 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Nitrous.IO updates</title>
-  <link href="http://blog.nitrous.io/atom.xml" rel="self"/>
+  <atom:link href="http://blog.nitrous.io/atom.xml" rel="self" type="application/rss+xml"/>
   <link href="http://blog.nitrous.io/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://blog.nitrous.io/</id>
