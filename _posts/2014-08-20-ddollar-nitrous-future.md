@@ -17,7 +17,7 @@ That being said, an area where we haven't seen much improvement is in the develo
 
 With the ease of creating production environments we should be able to develop in one as well. The work we do building our development environments should be reusable when we go to production. You can try to achieve this today with a VPS or a virtual machine but the reality is that these solutions have a painfully high amount of friction.
 
-The [Nitrous.IO team](www.nitrous.io/team?{{page.utm}}) is working hard to make the development experience great and I am excited to announce that I've joined the team as VP of Technical Operations.
+The [Nitrous.IO team](www.nitrous.io/team?{{page.utm}}) is working hard to make the development experience great and I am excited to announce that I am joining them in that mission.
 
 If you're interested in helping us, please check out our [jobs page](www.nitrous.io/jobs?{{page.utm}}). 
 
