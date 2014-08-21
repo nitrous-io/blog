@@ -6,7 +6,7 @@ utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=ddollarjoinsnitrous
 category: announcements
 description: David Dollar joins the Nitrous.IO team and shares his excitement for the future of software development.
 ---
-<img src="/images/ddollar.jpeg" style="height: 14em ; float: right; margin-left: 3em">
+<img src="/images/ddollar.jpeg" style="height: 10em ; float: right; margin-left: 2em">
 
 It has been incredibly exciting to watch the evolution of the tools developers use to deploy software on the internet over the last few years. We now live in a world where instead of planning, procuring, and installing complex physical infrastructure we can create a configuration file and spin up a new datacenter anywhere in the world in minutes.
 
