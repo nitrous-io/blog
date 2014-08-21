@@ -20,7 +20,7 @@ With the ease of creating production environments we should be able to develop i
 
 The [Nitrous.IO team](www.nitrous.io/team?{{page.utm}}) is working hard to make the development experience great and I am excited to announce that I am joining them in that mission.
 
-If you're interested in helping us, please check out our [jobs page](www.nitrous.io/jobs?{{page.utm}}). 
+If you're interested in helping us, please check out our [jobs page](http://www.nitrous.io/jobs?{{page.utm}}).
 
 We have some big announcements coming up next month, so stay tuned!
 
