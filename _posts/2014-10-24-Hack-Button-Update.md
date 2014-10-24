@@ -6,7 +6,7 @@ utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=hackbuttonupdate
 category: partnerships
 ---
 
-We launched [Hack on Nitrous.IO](https://www.nitrous.io/hack?{{page.utm}}) in April and were surprised by the groundswell of support and adoption from various partners and open source projects. Almost 3000 individual repos were cloned over 6000 times using an [embedded hack button](https://www.nitrous.io/embed?{{page.utm}}) in the project repo on github or the [Bookmarklet.](https://www.nitrous.io/hack#bookmarklet?{{page.utm}})
+We launched [Hack on Nitrous.IO](https://www.nitrous.io/hack?{{page.utm}}) in April and were surprised by the groundswell of support and adoption from various partners and open source projects. Almost 3000 individual repos were cloned over 6000 times using an [embedded hack button](https://www.nitrous.io/embed?{{page.utm}}) in the project repo on GitHub or the [Bookmarklet.](https://www.nitrous.io/hack#bookmarklet?{{page.utm}})
 
 ![Hack On Nitrous](/images/hack-screen.png)
 
