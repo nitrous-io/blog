@@ -23,5 +23,4 @@ If you want to try out a sample application, you can start hacking on [Discover 
 Microscope](https://github.com/DiscoverMeteor/Microscope) application by clicking the **Hack** button below.
 
 [![Hack DiscoverMeteor/Microscope on
-Nitrous.IO](https://d4o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=meteor&repo=DiscoverMeteor%2FMicroscope&file_to_open=README.nitrous.
-md)
+Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-4b6757c3247e3c50314390ece34cdb11.png)](https://www.nitrous.io/hack_button?source=embed&runtime=meteor&repo=DiscoverMeteor%2FMicroscope&file_to_open=README.nitrous.md)
