@@ -109,8 +109,8 @@ At this point you will notice that the app is static, and that there is no real 
 Include Firebase and AngularFire to your project by adding the following lines within the `<head>` section of your `index.html` file:
 
     <!-- Firebase and AngularFire Extensions -->
-    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.5.0-rc1/angularfire.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.5.0/angularfire.js"></script>
 
 ### Updating the Controller for Firebase
 
