@@ -8,7 +8,7 @@ author: eric
 
 ![Rails Girls](/images/rails-girls.jpg)
 
-You might have heard of the [Hour of Code](https://www.hourofcode.com) movement recently - it’s a one-hour introduction to computer science targeted at demystifying code and showing that anybody can learn programming. It has gained tremendous traction since its launch and has already attracted 97 million participants. The organisation behind the movement, [Code.org](https://www.code.org), won the support of politicians (President Obama), major tech companies (Apple, Google), educators and students, signifying their commitment to the vision of inspiring students to learn coding.
+You might have heard of the [Hour of Code](http://www.hourofcode.com) movement recently - it’s a one-hour introduction to computer science targeted at demystifying code and showing that anybody can learn programming. It has gained tremendous traction since its launch and has already attracted 97 million participants. The organization behind the movement, [Code.org](http://www.code.org), won the support of politicians (President Obama), major tech companies (Apple, Google), educators and students, signifying their commitment to the vision of inspiring students to learn coding.
 
 But what happens after an Hour of introduction to programming? How are students going to continue their coding education? Educators need to continually feed students’ interest and excitement around learning to code. 
 
@@ -22,4 +22,4 @@ Teachers are able to log into the students’ boxes from time to time to trouble
 Check out how [Rails Girls Auckland](http://natdudley.github.io/railsgirlsblog/events/2014/08/11/rails-girls-nitrous) and [Gaslight](http://blog.nitrous.io/2013/10/01/gaslight-angularjs-at-campng.html?{{page.utm}}) have utilized Nitrous.IO to conduct coding lessons!
 
 Try Nitrous.IO, free to try and free to use
-To get started, simply create a [free account](https://www.nitrous.io?{{page.utm}}) - Nitrous.IO offers free accounts with basic functionality, you can [upgrade](https://www.nitrous.io/pricing?{{page.utm}}) your plan anytime along the way if you find that you need more speed and a faster box with additional features. Follow the steps in this [tutorial](https://help.nitrous.io?{{page.utm}}) once you have your account set up.
+To get started, simply create a [free account](https://www.nitrous.io?{{page.utm}}) - Nitrous.IO offers free accounts with basic functionality, you can [upgrade](https://www.nitrous.io/pricing?{{page.utm}}) your plan anytime along the way if you find that you need more speed and a faster box with additional features. Follow the steps in this [tutorial](http://help.nitrous.io/teach-coding?{{page.utm}}) once you have your account set up.
