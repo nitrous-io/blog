@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Teach Coding with Nitrous.IO
+title: HOUR OF CODE - What’s happens in the second hour?
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=teach-coding
 category: tutorials
 author: eric
 ---
-HOUR OF CODE - What’s happens in the second hour?
 
 You might have heard of the [Hour of Code](www.hourofcode.com) movement recently - it’s a one-hour introduction to computer science targeted at demystifying code and showing that anybody can learn programming. It has gained tremendous traction since its launch and has already attracted 97 million participants. The organisation behind the movement, [Code.org](www.code.org), won the support of politicians (President Obama), major tech companies (Apple, Google), educators and students, signifying their commitment to the vision of inspiring students to learn coding.
 
