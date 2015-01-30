@@ -6,7 +6,9 @@ category: tutorials
 author: eric
 ---
 
-You might have heard of the [Hour of Code](www.hourofcode.com) movement recently - it’s a one-hour introduction to computer science targeted at demystifying code and showing that anybody can learn programming. It has gained tremendous traction since its launch and has already attracted 97 million participants. The organisation behind the movement, [Code.org](www.code.org), won the support of politicians (President Obama), major tech companies (Apple, Google), educators and students, signifying their commitment to the vision of inspiring students to learn coding.
+![Rails Girls](/images/rails-girls.jpg)
+
+You might have heard of the [Hour of Code](https://www.hourofcode.com) movement recently - it’s a one-hour introduction to computer science targeted at demystifying code and showing that anybody can learn programming. It has gained tremendous traction since its launch and has already attracted 97 million participants. The organisation behind the movement, [Code.org](https://www.code.org), won the support of politicians (President Obama), major tech companies (Apple, Google), educators and students, signifying their commitment to the vision of inspiring students to learn coding.
 
 But what happens after an Hour of introduction to programming? How are students going to continue their coding education? Educators need to continually feed students’ interest and excitement around learning to code. 
 
