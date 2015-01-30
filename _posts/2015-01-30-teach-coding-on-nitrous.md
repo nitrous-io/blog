@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HOUR OF CODE - What’s happens in the second hour?
+title: HOUR OF CODE - What happens in the second hour?
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=teach-coding
 category: tutorials
 author: eric
