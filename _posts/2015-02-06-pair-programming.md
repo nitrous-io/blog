@@ -18,6 +18,6 @@ Although pair programming might not be a panacea for every team, the rewards are
 
 ##Collaborate in real-time using Nitrous.IO
 
-Whether pair programming works for you or not, here’s how you can utilize [Nitrous.IO](http://www.nitrous.io/?{{page.utm}}) to better your collaboration experience. Our real-time collaborative editor allows you and your colleagues to pair program in the cloud from anywhere. To pair program on Nitrous.IO, create a [free account](http://www.nitrous.io/?{{page.utm}}) to begin if you haven’t got one. Next, simply follow the steps in this [tutorial](http://help.nitrous.io/) to kick start your pair programming experience. 
+Whether pair programming works for you or not, here’s how you can utilize [Nitrous.IO](http://www.nitrous.io/?{{page.utm}}) to better your collaboration experience. Our real-time collaborative editor allows you and your colleagues to pair program in the cloud from anywhere. To pair program on Nitrous.IO, create a [free account](http://www.nitrous.io/?{{page.utm}}) to begin if you haven’t got one. Next, simply follow the steps in this [tutorial](http://help.nitrous.io/pair-programming/) to kick start your pair programming experience. 
 
 
