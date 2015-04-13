@@ -44,15 +44,15 @@ p img {
 }
 
 .navbar {
-  background: #2a3239;
+  background: #4e5862;
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
 }
 
 .navbar a.navbar-brand {
-  font-size: 16px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  font-weight: 300;
   color: #fff;
   font-family: 'EurostileLTPro-BoldEx2';
   text-transform: uppercase;
@@ -76,7 +76,8 @@ a.navbar-brand span {
 
 .navbar-nav > li > a {
   color: #e8e8e8;
-  font-size: 12px;
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .navbar-nav > li > a:hover {
@@ -104,6 +105,17 @@ a.btn.btn-success {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   text-shadow: 0 -1px 0 #156819;
+}
+
+.navbar a.primary.btn {
+  height: 34px;
+  line-height: 32px;
+  display: block;
+  position: relative;
+  margin-top: 8px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
 }
 
 .navbar-nav > li.signup > a.btn.btn-success {
