@@ -11,7 +11,7 @@ category: announcements
 
 We believe the software development process is faster and more enjoyable when developers can easily connect and work together from anywhere in the world. We’ve been hard at work improving the everyday experience on the [Nitrous platform](https://www.nitrous.io). Today, we’re excited to share a new product we’re calling Nitrous Pro.
 
-<a class="btn btn-success ripple" data-ripple-color='rgba(255,255,255,.1)' href="https://pro.nitrous.io/app/#/signup">Create your Cloud Workspace Today</a>
+<a class="btn btn-success ripple" data-ripple-color='rgba(255,255,255,.1)' href="https://pro.nitrous.io/app/#/signup">Claim your Cloud Workspace</a>
 
 #### Dedicated Resources with Root Access
 
