@@ -12,7 +12,7 @@ category: announcements
 At Nitrous we believe the software development process is faster and more enjoyable when developers can easily connect and work together from anywhere in the world. We’ve been hard at work the past few months improving the everyday experience on the [Nitrous platform](https://www.nitrous.io). Today, we’re excited to share a few of the exciting changes of a new product we’re calling Nitrous Pro. 
 
 <br />
-<a class="btn btn-success ripple" data-ripple-color='rgba(255,255,255,.1)' href="#">Sign up today and get $10 in free credits</a>
+<a class="btn btn-success ripple" data-ripple-color='rgba(255,255,255,.1)' href="https://pro.nitrous.io/app/#/signup?promo=PRO10">Sign up today and get $10 in free credits</a>
 
 #### Dedicated Resources with Root Access
 
