@@ -36,7 +36,7 @@ The [Nitrous Pro IDE](https://pro.nitrous.io/features/?utm={{page.utm}}) is fast
 
 <img src="/images/nitrouspro/nitrous-pro-new-container_1024.png" />
 
-We’ve also added support for a number of [new stack templates](https://pro.nitrous.io/stacks?utm={{utm}}), including the [Google Cloud SDK](https://cloud.google.com/sdk/), [Discourse](http://www.discourse.org/), [Wordpress](https://www.wordpress.com/), [Laravel](http://laravel.com/) and more. We’ll be adding support for other popular frameworks and languages in the coming weeks.
+We’ve also added support for a number of [new stack templates](https://pro.nitrous.io/stacks/?utm={{utm}}), including the [Google Cloud SDK](https://cloud.google.com/sdk/), [Discourse](http://www.discourse.org/), [Wordpress](https://www.wordpress.com/), [Laravel](http://laravel.com/) and more. We’ll be adding support for other popular frameworks and languages in the coming weeks.
 
 The new system is also fully compatible with Docker. This means users on Nitrous Pro can create development environments using thousands of readily available Docker images on Docker Hub. This topic deserves its own blog post -- we’ll be following up with more details about Docker and Nitrous Pro!
 
