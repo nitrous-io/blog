@@ -30,13 +30,13 @@ We think dogfooding is absolutely the best way to build the best products; so mu
  <source src="https://nitrous-image-icons.s3.amazonaws.com/nitrous-pro-collab.mp4" type="video/mp4">
 </video>
 
-The [Nitrous Pro IDE](https://www.nitrous.io/features/?utm={{page.utm}}) is faster, more functional and more beautiful than ever. Our new IDE includes seamless real-time collaboration, split pane editing, file watching, and multiple terminals. It’s incredibly easy to invite teammates to your workspace and start coding together in a fully-loaded development environment. You can give teammates access to your workspace, allowing collaboration whenever is best for them.
+The [Nitrous Pro IDE](https://pro.nitrous.io/features/?utm={{page.utm}}) is faster, more functional and more beautiful than ever. Our new IDE includes seamless real-time collaboration, split pane editing, file watching, and multiple terminals. It’s incredibly easy to invite teammates to your workspace and start coding together in a fully-loaded development environment. You can give teammates access to your workspace, allowing collaboration whenever is best for them.
 
 #### Expanded Template Library
 
 <img src="/images/nitrouspro/nitrous-pro-new-container_1024.png" />
 
-We’ve also added support for a number of [new stack templates](https://www.nitrous.io/stacks?utm={{utm}}), including the [Google Cloud SDK](https://cloud.google.com/sdk/), [Discourse](http://www.discourse.org/), [Wordpress](https://www.wordpress.com/), [Laravel](http://laravel.com/) and more. We’ll be adding support for other popular frameworks and languages in the coming weeks.
+We’ve also added support for a number of [new stack templates](https://pro.nitrous.io/stacks?utm={{utm}}), including the [Google Cloud SDK](https://cloud.google.com/sdk/), [Discourse](http://www.discourse.org/), [Wordpress](https://www.wordpress.com/), [Laravel](http://laravel.com/) and more. We’ll be adding support for other popular frameworks and languages in the coming weeks.
 
 The new system is also fully compatible with Docker. This means users on Nitrous Pro can create development environments using thousands of readily available Docker images on Docker Hub. This topic deserves its own blog post -- we’ll be following up with more details about Docker and Nitrous Pro!
 
