@@ -42,7 +42,7 @@ The new system is also fully compatible with Docker. This means users on Nitrous
 
 #### Transitioning to the new Nitrous Pro Platform
 
-With the launch of Nitrous Pro, we will be phasing out support for the original Nitrous product on July 1st 2015. We are confident that you will find Nitrous Pro a better fit for your needs, as we’ve improved every aspect of the experience. There is a free tier available on Nitrous Pro that will allow you to utilize the platform up to 2 hours per day without paying or needing to add a credit card. You can read more about migrating your boxes to your new Nitrous Pro workspace [here](http://docs.nitrous.io).
+With the launch of Nitrous Pro, we will be phasing out support for the original Nitrous product on July 1st 2015. We are confident that you will find Nitrous Pro a better fit for your needs, as we’ve improved every aspect of the experience. There is a free tier available on Nitrous Pro that will allow you to utilize the platform up to 2 hours per day without paying or needing to add a credit card. You can read more about migrating your boxes to your new Nitrous Pro workspace [here](http://docs.nitrous.io/v1.0/docs/migrate-your-data-to-the-new-platform?utm={{page.utm}}).
 
 If you’re running a class or workshop using the original version of Nitrous, we’re happy to help you transition to the new system and work with you personally to leverage all the new benefits. Please email us at [pro@nitrous.io](mailto:pro@nitrous.io) to learn more.
 
