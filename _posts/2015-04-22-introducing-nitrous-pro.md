@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: basic
 title: Introducing Nitrous Pro
-highlight_image: Key Image for FB/Twitter
 description: "Introducing Nitrous Pro, dedicated workspaces with root access and real time collaboration."
 highlight_image: nitrouspro/nitrous-osx-dual_panes.png
 author: ajhit406

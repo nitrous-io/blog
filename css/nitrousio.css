@@ -39,6 +39,15 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.4em;
 }
 
+h1.logo {
+  font-size: 36px;
+  font-weight: 300;
+  color: #222;
+  font-family: 'EurostileLTPro-BoldEx2';
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
 h4{
   padding-top: 1.3rem;
 }
