@@ -1,5 +1,5 @@
 ---
-layout: basic
+layout: post
 title: Introducing Nitrous Pro
 description: "Introducing Nitrous Pro, dedicated workspaces with root access and real time collaboration."
 highlight_image: nitrouspro/nitrous-osx-dual_panes.png
