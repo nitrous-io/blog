@@ -69,5 +69,5 @@ In an effort to maintain the best user experience for all of our users, the free
 
 We’ve found the 2 hour limit is sufficient for a reasonable amount of usage and enables most developers to benefit from the system while still allowing us to provide the best experience possible.
 
-If you are using Nitrous for more than 2 hours per day, we hope you consider a paid subscription with unlimited hours. You also do not need to verify your account with your mobile number if you are a paying user.
+If you are using Nitrous for more than 2 hours per day, we hope you consider a paid subscription with unlimited hours.
 <br /><br />
