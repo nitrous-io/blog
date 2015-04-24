@@ -29,7 +29,7 @@ If you were using the original Nitrous (Nitrous Lite) for a workshop or class, [
 
 ####  __Can I still sign up for a paid plan on the original Nitrous?__
 
-As of Wednesday April 22nd, you can only purchase paid plans on Nitrous Pro. Pricing plans on Nitrous Pro are less expensive, and the platform is significantly improved across the board, so we are requesting all paid users to migrate to the new platform. We are confident that you will enjoy your experience with the new Nitrous Pro platform.
+As of Wednesday April 22nd, you can only purchase paid plans on Nitrous Pro.
 
 #### __Will my account be converted to Pro automatically?__
 
@@ -53,7 +53,7 @@ You will need to create a completely [new account on Nitrous Pro](https://pro.ni
 
 #### __How will pricing change?__
 
-Individual pricing plans on Nitrous are currently [$15, $30, and $65](https://pro.nitrous.io/pricing) for Basic, Standard, and Pro plans respectively. Please note that not only are the prices for Nitrous Pro lower than our old Nitrous lite plans but also that your cloud workspace is on a dedicated machine with root access and significant IDE and collaboration improvements.
+Individual pricing plans on Nitrous are currently [$15, $30, and $65](https://pro.nitrous.io/pricing) for Basic, Standard, and Pro plans respectively.
 
 #### __In what ways did you improve the IDE?__
 
@@ -63,7 +63,7 @@ We’ve added split pane editing, a more intuitive collaboration workflow, addit
 
 #### __How does the free plan work on Nitrous Pro?__
 
-Providing dedicated cloud virtual machines to hundreds of thousands of developers while maintaining superior performance is a difficult technical problem. A minority of users also unfortunately don’t follow our [terms of service](http://help.nitrous.io/admin-terms/), which makes providing an unlimted free tier a difficult task.
+Providing dedicated cloud virtual machines to hundreds of thousands of developers while maintaining superior performance is a difficult technical problem. A minority of users also unfortunately don’t follow our [terms of service](http://help.nitrous.io/admin-terms/), which makes providing an unlimited free tier a difficult task.
 
 In an effort to maintain the best user experience for all of our users, the free workspace on Nitrous Pro is limited to 2 hours of usage per day, and then will automatically shut down. We also require free users to verify themselves with a mobile phone number, to restrict the amount of abuse on free accounts.
 
