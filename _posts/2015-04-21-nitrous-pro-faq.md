@@ -10,6 +10,9 @@ We [recently announced](http://blog.nitrous.io/2015/04/22/introducing-nitrous-pr
 
 We worked hard to ensure that [Nitrous Pro](https://pro.nitrous.io) has all of the great features you loved in the original Nitrous product, and we’ve added a ton of improvements. Below you’ll find most of the details you need regarding Nitrous Pro and the migration. If there’s something missing, please [send us an email](mailto:support@nitrous.io).
 
+<br />
+<img src="/images/nitrouspro/Nitrous-Screenshot.png" />
+
 #### __What are the biggest differences between Nitrous Pro and the original Nitrous (Nitrous Lite)?__
 
 [Nitrous Pro](https://pro.nitrous.io) is a completely new and separate platform that requires a [new account login](https://pro.nitrous.io/app/#/signup). The biggest difference is that Nitrous Pro runs on your own, dedicated cloud machine. This enables us to provide root access to all users, and also improves stability and performance across the board.
