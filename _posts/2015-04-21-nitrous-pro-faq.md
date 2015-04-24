@@ -21,7 +21,7 @@ We’ve also made [a ton](https://pro.nitrous.io/features) of other improvements
 
 #### __How long will I be able to access my old Nitrous account?__
 
-Your old Nitrous account will be accessible at [https://lite.nitrous.io](https://lite.nitrousio) until we sunset the old product on July 1st, 2015. If you have files that you would like to move to Nitrous Pro, you can read about migration options here:
+Your old Nitrous account will be accessible at [https://lite.nitrous.io](https://lite.nitrous.io) until we sunset the old product on July 1st, 2015. If you have files that you would like to move to Nitrous Pro, you can read about migration options here:
 
 [http://docs.nitrous.io/v1.0/docs/migrate-your-data-to-the-new-platform](http://docs.nitrous.io/v1.0/docs/migrate-your-data-to-the-new-platform)
 
