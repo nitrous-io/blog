@@ -250,6 +250,7 @@ blockquote{
 p.caption {
   margin-left: 7px;
   color: #888;
+  font-size: 12px;
 }
 
 .gist .gist-file .gist-data{
