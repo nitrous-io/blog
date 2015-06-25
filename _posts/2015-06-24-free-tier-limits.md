@@ -6,56 +6,32 @@ category: announcements
 utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=notimelimit
 ---
 
-FIXME I want to have screenshots of the time limit UI in here with red Xes
-drawn on top as the highlight image -- any thoughts?
+FIXME I want to have screenshots of the time limit UI in here with red Xes drawn on top as the highlight image -- any thoughts?
 
-It's been two months since we [launched Nitrous
-Pro](http://blog.nitrous.io/2015/04/22/introducing-nitrous-pro.html) and we
-have been very excited about the response so far.  Feedback has been very
-positive, from both existing users of Nitrous Lite and newcomers to the Nitrous
-experience.
+It's been two months since we [launched Nitrous Pro](http://blog.nitrous.io/2015/04/22/introducing-nitrous-pro.html) and we have been very excited about the response so far. Feedback has been very positive, from both existing users of Nitrous Lite and newcomers to the Nitrous experience.
 
-However, not all user comments have been smileys and unicorns.  In particular,
-many have voiced their dissatisfaction with the hourly limit on the new free
-tier.  We pay a lot of attention to user feedback, and it has been clear that
-the new policy needs changing.
+Unfortunately, not all user comments have been all rainbows and unicorns... we know that many of you have been unhappy with the 2 hour limit on the free tier. That limit was originally put in place because we still have to pay Amazon for our server usage even on the free tier, so it gets expensive to run that many machines without charging anything for them. But, as many of you have seen, the 2 hour limit just ends up being frustrating.
 
-Today, we are happy to announce the upcoming removal of the time limit on the
-free tier.
+Two hours seems like a lot of time at first, but when you consider that checking your email, getting a drink and reading *just one more thread* on Reddit can easily use up an hour or more, you're left with very little time for actual work. We really want to fix that, so that's why we are so happy to announce that, starting today, **there is no time limit on the free tier!**
 
-### What's changed
+### What's changed?
 
-There will no longer be a daily time limit applied to free tier users.  Your
-workspace will remain on as long as you are using the IDE.
+There will no longer be a daily time limit applied to free tier users! Instead, when you first log in for the day you'll see a slight delay (usually 30-60 seconds) before your workspace becomes available. Once it's finished starting up, however, it's business as usual!
 
-Simply put, if you close the browser tab with the IDE open, your
-workspace will be shut down shortly after.
+If you don't use your workspace for a while we'll shut it down again, but when you come back everything should be (mostly) as you left it.
 
 ### Questions and Answers
 
 #### __When will this go live?__
 
-We will be rolling this out to all free users by Jun 27, 2015.  Once you no
-longer see the hourly limit ticking down in your IDE menu -- it means your
-workspace is on the new system!
+We will be rolling this out to all free users by June 27, 2015.  Once you no longer see the hourly limit ticking down in your IDE menu &mdash; it means your workspace is on the new system!
 
 #### __What happens when my workspace shuts down?__
 
-Shutting down is similar to powering off a machine: daemons will stop running,
-and any existing GNU Screen or tmux sessions will be gone.
+When your workspace shuts down it will stop all running processes. Everything you've saved to disk will stay exactly as is, but any programs that were running (including GNU screen and tmux) will be stopped.
 
-Preview URLs will no longer be available since web servers will no longer be
-running.
+This also means that Preview URLs will no longer be available since the web server will no longer be running.
 
 #### __What happens if I lose my internet connection?__
 
-Unfortunately since this means we cannot detect if you are using the IDE, your
-workspace will shut down after the grace period.  This grace period was chosen
-to be sufficient to handle temporary network outages and things like router
-resets.
-
-#### __Does this mean I can leave the IDE on permanently and the workspace won't shut down?__
-
-We hope users won't try to find ways to bypass the new system.  Users
-attempting to keep workspaces on while unattended will be are encouraged to
-consider our [paid subscriptions](https://pro.nitrous.io/pricing).
+It depends on how long your connection is down. We measure usage by the hour, so if you lost your connection after using your workspace for 2 hours and 12 minutes, you'll have ~48 minutes before we shut it down. If you were using it for 1 hour and 45 minutes, you'll have ~15 minutes before it is terminated.
