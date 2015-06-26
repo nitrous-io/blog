@@ -13,7 +13,7 @@ It's been two months since we [launched Nitrous Pro](http://blog.nitrous.io/2015
 
 Unfortunately, not all user comments have been all rainbows and unicorns...
 
-The time limit in the free tier was something that many people found really frustrating, and we really want to fix that. That's why we are so happy to announce that, starting today, **there is no time limit on the free tier!**
+The time limit on the free tier was something that many people found really frustrating, and we really want to fix that. That's why we are so happy to announce that, starting today, **there is no time limit on the free tier!**
 
 ### What's changed?
 
@@ -25,7 +25,7 @@ If you don't use your workspace for a while we'll shut it down again, but when y
 
 #### When will this go live?
 
-We will be rolling this out to all free users by June 27, 2015.  Once you no longer see the hourly limit ticking down in your IDE menu &mdash; it means your workspace is on the new system!
+We will be rolling this out to all free users by June 27, 2015.  Once you no longer see the clock ticking down in your IDE menu &mdash; it means your workspace is on the new system!
 
 #### What happens when my workspace shuts down?
 
