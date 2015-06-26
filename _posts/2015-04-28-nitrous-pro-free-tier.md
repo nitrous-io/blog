@@ -2,6 +2,7 @@
 layout: post
 title: Nitrous Pro Free Tier
 highlight_image: nitrouspro/nitrous-osx-dual_panes.png
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=nitrouspro
 description: "We refined our free tier in order to provide the best possible development experience for our users. This required small, but important to understand changes."
 author: AJ
 ---

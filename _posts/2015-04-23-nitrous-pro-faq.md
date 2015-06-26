@@ -2,6 +2,7 @@
 layout: post
 title: Migrating to Nitrous Pro
 highlight_image: nitrouspro/nitrous-osx-dual_panes.png
+utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=nitrouspro
 description: "We will be sunsetting the original version of Nitrous, now called Nitrous Lite, on July 1st, 2015. Please read more about how you can best transfer to Nitrous Pro, the newest version of our cloud development platform."
 author: AJ
 ---
