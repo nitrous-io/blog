@@ -34,4 +34,4 @@ This also means that Preview URLs will no longer be available since the web serv
 
 #### __What happens if I lose my internet connection?__
 
-It depends on how long your connection is down. We measure usage by the hour, so if you lost your connection after using your workspace for 2 hours and 12 minutes, you'll have ~48 minutes before we shut it down. If you were using it for 1 hour and 45 minutes, you'll have ~15 minutes before it is terminated.
+It depends on how long your connection is down. The amount of time we wait before shutting down an unused workspace is variable, but you can generally assume that if you're back within 10-15 minutes the workspace will still be running. If it's longer than that, you might need to wait for it to be started back up.
