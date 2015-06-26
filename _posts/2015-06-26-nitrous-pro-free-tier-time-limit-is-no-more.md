@@ -25,7 +25,7 @@ If you don't use your workspace for a while we'll shut it down again, but when y
 
 #### When will this go live?
 
-We will be rolling this out to all free users by June 27, 2015.  Once you no longer see the clock ticking down in your IDE menu &mdash; it means your workspace is on the new system!
+We will be rolling this out starting today to all free users by June 27, 2015.  Once you no longer see the clock ticking down in your IDE menu &mdash; it means your workspace is on the new system!
 
 #### What happens when my workspace shuts down?
 
