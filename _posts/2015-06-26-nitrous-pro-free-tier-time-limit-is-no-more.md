@@ -11,7 +11,7 @@ utm: utm_source=nitrous.io&utm_medium=blog&utm_campaign=notimelimit
 
 It's been two months since we launched Nitrous Pro and we have been very excited about the response so far. Feedback has been very positive, from both existing users of Nitrous Lite and newcomers to the Nitrous experience.
 
-Unfortunately, not all user comments have been all rainbows and unicorns...
+Unfortunately, not all user comments have been rainbows and unicorns...
 
 The time limit on the free tier was something that many people found really frustrating, and we really want to fix that. That's why we are so happy to announce that, starting today, [**there is no time limit on the free tier**](https://pro.nitrous.io/app/#/signup?{{ page.utm }})
 
