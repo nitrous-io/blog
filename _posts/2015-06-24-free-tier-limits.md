@@ -10,9 +10,9 @@ FIXME I want to have screenshots of the time limit UI in here with red Xes drawn
 
 It's been two months since we [launched Nitrous Pro](http://blog.nitrous.io/2015/04/22/introducing-nitrous-pro.html) and we have been very excited about the response so far. Feedback has been very positive, from both existing users of Nitrous Lite and newcomers to the Nitrous experience.
 
-Unfortunately, not all user comments have been all rainbows and unicorns... we know that many of you have been unhappy with the 2 hour limit on the free tier. That limit was originally put in place because we still have to pay Amazon for our server usage even on the free tier, so it gets expensive to run that many machines without charging anything for them. But, as many of you have seen, the 2 hour limit just ends up being frustrating.
+Unfortunately, not all user comments have been all rainbows and unicorns...
 
-Two hours seems like a lot of time at first, but when you consider that checking your email, getting a drink and reading *just one more thread* on Reddit can easily use up an hour or more, you're left with very little time for actual work. We really want to fix that, so that's why we are so happy to announce that, starting today, **there is no time limit on the free tier!**
+The two hour limit was something that many people found really frustrating, and we really want to fix that. That's why we are so happy to announce that, starting today, **there is no time limit on the free tier!**
 
 ### What's changed?
 
