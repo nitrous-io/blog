@@ -321,16 +321,20 @@ pre{
   margin: 14px 0;
   padding: 1rem;
   border: 0;
+}
 
-code{
-    padding: 9.5px;
-  }
+pre code {
+  padding: 9.5px;
 }
 
 code {
   color: #333;
   background-color: #f8f8f8;
   border-radius: 4px;
+}
+
+.share-buttons {
+  margin-top: 20px;
 }
 
 @keyframes ripple-animation {
