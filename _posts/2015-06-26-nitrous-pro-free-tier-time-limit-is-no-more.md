@@ -34,5 +34,3 @@ This also means that Preview URLs will no longer be available since the web serv
 #### **What happens if I lose my internet connection?**
 
 It depends on how long your connection is down. The amount of time we wait before powering off an unused workspace is variable, but you can generally assume that if you're back within 10-15 minutes the workspace will still be running. If it's longer than that, you might need to wait for it to be started back up.
-
-<a href="https://pro.nitrous.io/app/#/signup?{{ page.utm }}" class="btn btn-block btn-success">Claim Your Free Nitrous Pro Workspace Today</a>
