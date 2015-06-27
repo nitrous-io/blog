@@ -1,7 +1,7 @@
 relative_permalinks: true
 permalink: /:year/:month/:day/:title.html
 markdown: rdiscount
-highlighter: true
+highlighter: pygments
 paginate: 7
 production_url: http://blog.nitrous.io
 name: Nitrous.IO Blog
