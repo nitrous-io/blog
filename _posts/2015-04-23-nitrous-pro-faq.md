@@ -54,7 +54,7 @@ You will need to create a completely [new account on Nitrous Pro](https://pro.ni
 
 #### __How will pricing change?__
 
-Individual pricing plans on Nitrous are currently [$15, $30, and $65](https://pro.nitrous.io/pricing) for Basic, Standard, and Pro plans respectively.
+Individual pricing plans on Nitrous are currently [$9, $29, and $79](https://pro.nitrous.io/pricing) for Basic, Standard, and Pro plans respectively.
 
 #### __In what ways did you improve the IDE?__
 
