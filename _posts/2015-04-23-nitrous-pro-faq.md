@@ -62,13 +62,4 @@ We’ve added split pane editing, a more intuitive collaboration workflow, addit
 
 [https://pro.nitrous.io/features/](https://pro.nitrous.io/features/)
 
-#### __How does the free plan work on Nitrous Pro?__
-
-Providing dedicated cloud virtual machines to hundreds of thousands of developers while maintaining superior performance is a difficult technical problem. A minority of users also unfortunately don’t follow our [terms of service](http://help.nitrous.io/admin-terms/), which makes providing an unlimited free tier a difficult task.
-
-In an effort to maintain the best user experience for all of our users, the free workspace on Nitrous Pro is limited to 2 hours of usage per day, and then will automatically shut down. We also require free users to verify themselves with a mobile phone number, to restrict the amount of abuse on free accounts.
-
-We’ve found the 2 hour limit is sufficient for a reasonable amount of usage and enables most developers to benefit from the system while still allowing us to provide the best experience possible.
-
-If you are using Nitrous for more than 2 hours per day, we hope you consider a paid subscription with unlimited hours.
 <br /><br />
