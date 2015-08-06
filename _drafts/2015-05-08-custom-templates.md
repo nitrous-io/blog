@@ -186,6 +186,20 @@ EXPOSE $NITROUS_PREVIEW_PORT
 
 This will make port 8000 available in the 'Preview' menu of the Nitrous IDE.
 
+### Adding a README
+
+```Dockerfile
+ENV NITROUS_README_URL https://nitrous-readmes.s3.amazonaws.com/khan.2015-08-06.html
+```
+
+Containers can have an optional README that is opened the first time a
+container loads, and is thereafter accessible from the Help menu.
+
+To add a README, simply upload a static html file to a public location, e.g.
+`Amazon S3`, and add the `NITROUS_README_URL` environment variable pointing to it.
+
+The location must be accessible via HTTPS.
+
 ### Finishing up
 
 Remember to add a `USER root` at the end.
@@ -230,3 +244,6 @@ We have covered the basic integration points:
   have non-root access to files created
 - using `ENV NITROUS_PREVIEW_PORT 8000` and `EXPOSE $NITROUS_PREVIEW_PORT` to
   allow users to preview a web server
+- using `ENV NITROUS_README_URL` to add a custom README to containers when opening in IDE
+
+We look forward to seeing the images our users build on top of Nitrous!
