@@ -23,7 +23,8 @@ There are two ways to integrate your custom setup with Nitrous:
 This blog post will cover the first approach.  A subsequent post will explore
 the second.
 
-We will be creating a custom template for the [Flask](http://flask.pocoo.org/docs/0.10/) web development framework for Python, and set up the [Flaskr](https://github.com/mitsuhiko/flask/tree/master/examples/flaskr/) example app.
+We will be creating a custom template for the [Khan Academy
+exercises](https://github.com/khan/khan-exercises) repo.
 
 ### What you will need
 
@@ -32,17 +33,17 @@ the following:
 
 1. An internet connection
 1. A working Docker install (>= 1.5.0)
-1. A scratch directory for the Dockerfile and any additional files needed (e.g. `/tmp/nitrous-test`)
+1. A scratch directory for the Dockerfile and any additional files needed (e.g. `/tmp/nitrous-custom`)
 
 If you are already a paying Pro user, you can skip the Docker install step by
 following this tutorial within Nitrous! Just [enable advanced
-mode](http://docs.nitrous.io/v1.0/docs/advanced-container-management-options?utm_source=nitrous.io&utm_medium=blog&utm_campaign=custom_templates`)
+mode](https://community.nitrous.io/docs/advanced-options?utm_source=nitrous.io&utm_medium=blog&utm_campaign=custom_templates`)
 and create a new container with the `Docker` template.
 
 ### The base image
 
 ```Dockerfile
-FROM quay.io/nitrous/ubuntu-bare
+FROM quay.io/nitrous/ubuntu
 ```
 
 In your scratch directory, create a file named `Dockerfile` with the above.
@@ -52,16 +53,19 @@ download.
 **Note**: you may need to precede all docker commands with `sudo` depending on
 how `docker` is set up on your system.
 
-The `ubuntu-bare` image sets up a user called `nitrous` and sets up multiple
+The `ubuntu` image sets up a user called `nitrous` and sets up multiple
 conveniences for it, including passwordless sudo, ability to SSH and injection
 of docker ENV variables.
 
 ### Installing software dependencies
 
+Note: the `quay.io/nitrous/ubuntu` image already comes with `git` -- the
+example below is just to demonstrate how to install apt-based dependencies.
+
 ```Dockerfile
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yy --no-install-recommends build-essential sqlite3 git && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yy --no-install-recommends git && \
   apt-get clean
 ```
 
@@ -77,6 +81,7 @@ you may be accustomed to:
   silence any warnings from `apt` not being run interactively
 - the `-yy` option automatically answers 'Yes' to prompts
 - the `no-install-recommends` option ensures only what we explicitly specify is installed; this saves disk space
+
 
 ### Testing the image
 
@@ -97,8 +102,8 @@ You now have a running container.  Next, run:
 ```shell
 $ docker exec -it f123456 bash
 root@f123456:#/ su --preserve-environment -c 'HOME=/home/nitrous bash' nitrous
-nitrous@f123456:/$ sqlite3 --version
-3.8.2 2013-12-06 14:53:30 27392118af4c38c5203a04b8013e1afdb1cebd0d
+nitrous@f123456:/$ git --version
+git version 1.9.1
 ```
 
 Let's breakdown the sequence here.
@@ -116,9 +121,9 @@ We want to test the container from the user's perspective, so we switch to the
 variables set by Docker `ENV` instructions, but also overrides `HOME`, so we
 set `HOME` explicitly.
 
-#### sqlite3
+#### git
 
-In this instance we are testing that `sqlite3` has been installed and is
+In this instance we are testing that `git` has been installed and is
 available to users.
 
 Now that we've tested the install, we can exit the container and remove it.
@@ -152,8 +157,76 @@ Dockerfile, otherwise the image will not run.
 
 ```Dockerfile
 RUN \
-  cd /tmp && \
-  git clone https://github.com/mitsuhiko/flask/ && \
-  mv flask/examples/flaskr ~/
-
+  cd /home/$NITROUS_USERNAME/code && \
+  git clone https://github.com/khan/khan-exercises/
 ```
+
+### Exposing a port
+
+By default the Python `SimpleHTTPServer` that the `khan-exercises` repo uses
+listens on port 8000.  We need to make that port available.
+
+Typically this would simply be:
+
+```Dockerfile
+EXPOSE 8000
+```
+
+However, we are going to do a little more.
+
+The Nitrous `preview port` has special meaning -- it means that port 80 will
+also be forwarded to that port.  This is useful for avoiding issues with
+firewalls that block other ports.  We declare it using a predefined environment
+variable.
+
+```Dockerfile
+ENV NITROUS_PREVIEW_PORT 8000
+EXPOSE $NITROUS_PREVIEW_PORT
+```
+
+This will make port 8000 available in the 'Preview' menu of the Nitrous IDE.
+
+### Finishing up
+
+Remember to add a `USER root` at the end.
+
+The final Dockerfile:
+
+```Dockerfile
+FROM quay.io/nitrous/ubuntu
+
+RUN \
+  apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -yy --no-install-recommends git && \
+    apt-get clean
+
+USER $NITROUS_USERNAME
+RUN \
+  cd /home/$NITROUS_USERNAME/code && \
+  git clone https://github.com/khan/khan-exercises/
+
+ENV NITROUS_PREVIEW_PORT 8000
+EXPOSE $NITROUS_PREVIEW_PORT
+
+USER root
+```
+
+Once a container is built from that image, all the user has to do is run:
+
+```shell
+cd ~/code/khan-exercises
+python -m SimpleHTTPServer
+```
+
+And then click `Preview > Port 8000` in the IDE menu in order to access the exercises.
+
+
+### Summary
+
+We have covered the basic integration points:
+
+- using `FROM quay.io/nitrous/ubuntu` to create a Nitrous-compatible image
+- switching to `USER $NITROUS_USERNAME` when running commands to ensure users
+  have non-root access to files created
+- using `ENV NITROUS_PREVIEW_PORT 8000` and `EXPOSE $NITROUS_PREVIEW_PORT` to
+  allow users to preview a web server
